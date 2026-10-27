@@ -1,0 +1,844 @@
+{
+  "source": "Portable_IoT-Enabled_Red_IR_PPG_Ruqs.pdf",
+  "title": "Smart Non-Invasive Hemoglobin Measurement Using Portable Embedded Technology",
+  "keywords": [
+    "Hemoglobin",
+    "Plethysmography",
+    "Oxygen saturation",
+    "Microcontroller",
+    "Arduino IDE",
+    "MATLAB",
+    "Android mobile App",
+    "Think speak"
+  ],
+  "sections": [
+    {
+      "label": "front_matter",
+      "title": "",
+      "subheadings": [
+        "Smart Non-Invasive Hemoglobin Measurement Using",
+        "Portable Embedded Technology"
+      ],
+      "n_sentences": 0,
+      "text": "Tatiparti Padma (), Usha Kumari Gokaraju Ranga Raju Institute of Engineering and Technology, Hyderabad, India"
+    },
+    {
+      "label": "abstract",
+      "title": "Abstract",
+      "subheadings": [],
+      "n_sentences": 8,
+      "text": "Hemoglobin plays a major role for the existence of the healthy human being it carries oxygen supply to every cell for its survival in the entire body. As its level varies from person to person between 12-17 grams per deciliter if very high or low cause diseases. Usually low hemoglobin cause anemia in many of the women during pregnancy. In the present article the hemoglobin measurement is done noninvasively using the photoplethysmography method at the fingertip by Infrared LED with a wavelength of (880 – 940) nm and Red LED with wavelength of 660nm. The empirical calculation of Hemoglobin estimation is carried indirectly through model of oxygen saturation in skin-tissue-bone attenuation of the light on to the extremities. The analysis is supported by the Arduino IDE and MATLAB toolboxes for filtering the noise in signal and processing for target parameters. Further these real time parameters were sent to expertise to check for corrective ness and with the actual invasive methods for diagnosing its course of action. Internet of Things (IOT) technology to the outside world communication through Android mobile App."
+    },
+    {
+      "label": "keywords",
+      "title": "Keywords",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "Hemoglobin, Plethysmography, Oxygen saturation, Microcontroller , Arduino IDE, MATLAB, Android mobile App, Think speak"
+    },
+    {
+      "label": "introduction",
+      "title": "Introduction",
+      "subheadings": [
+        "1.1 About photoplethysmography (PPG)"
+      ],
+      "n_sentences": 49,
+      "text": "In a Human body, blood is a fluid which carries nutrients and oxygen to all the cells and sends away the metabolic waste products from cells. In Red Blood Cells (RBC) the Hemoglobin carries oxygen is in red color contains iron and its main function is to helps oxygen transport through all over body from lungs. Analysis of various blood substances for instance, glucose, hemoglobin, cholesterol, protein, etc. are very essential parameters for monitoring health condition. Conventionally, a needle is used for collecting blood sample for the analysis invasively. This process requires expensive reagents and indirectly will impose on both patient and hospital.\n\nIn mammals, around 96% of RBC’s weight is made up of protein and volume of water is around 35%. Hb has O2 binding capacity about 1.34 mL oxygen per gram and this in turn will increase the oxygen capacity of blood in total to seventy-fold when it is compared with dissolved O2 in blood [1]. In humans a regular Hb molecule can carry / bind actively with four O2 molecules. Hb plays a major role for transport of other various gases; It will carry certain volume of body's respiratory CO2 (around 20% - 25% of the whole) as carbamino-hemoglobin where CO2 is bound with globin protein.\n\nA hemoglobin test will be performed to evaluate the quantity of hemoglobin in a person’s Red Blood Corpuscles (RBC). This is vital because the oxygen accessible to tissues is subject to the oxygen present in RBC and local perfusion. Without enough hemoglobin, oxygen supplied to the tissues will be insufficient and the lungs and heart must put more effort to solve this issue traditionally. A low hemoglobin measurement indicates that the person has anemia.\n\nAnemia will result based on decrease of size, function or number of RBC. Common causes comprise, a deficiency of iron, excessive bleeding and vitamin B12, annihilation of red cells or folic acid by mechanical trauma or antibodies or structurally abnormal hemoglobin. Hemoglobin levels also decrease due to cancer, kidney diseases , excessive Intravenous fluids and other chronic diseases. A raised hemoglobin level could be triggered by hypoxia (decreased O2), polycythemia Vera or dehydration (decreased water). Hypoxia can result from smoking, high altitudes, Influenza (such as emphysema) or Heart Failure. Hemoglobin levels can also be used to regulate whether an individual requires blood transfusion. Typically, an individual's hemoglobin must be lower than 7 - 8 gm/dL before considering blood transfusion. The hemoglobin concentration can be used to know number of packed RBC units that could be transfused.\n\nThe oxygen saturation measurement is termed as PPG due to use of photosensitive technique were a Plethysmo Gram (PG) was measured, from an organ in a form of volumetric procedure. This PPG is acquired by a help of pulse Oximeter sensor on illuminating skin, is a light sensitive in addition to measurement of light absorption changes due to the movement of blood or volume of air in various parts of a body noninvasively at micro vascular tissue bed.\n\nPPG supplies valuable data about the CVS (Cardio Vascular System) non-invasively . Photoplethysmography technology contains a small number of optoelectronic components for measuring the minor variations in the intensity of light; the LED as light source for illuminating tissue and for the process of detecting the change, used widely for medical devices commercially available to measure oxygen saturation, blood pressure, the total cardiac output were monitored towards respiration also for autonomic assessment function to detect the diseases related to peripheral vascular system.\n\nThis PPG signal waveform contains pulsatile physiological waveform (AC part) recognized to changes due synchronous blood volume typically in a frequency approximately 1 Hz with regard during cardiac activity, as shown Fig 1a. Alternating part which is the AC pulsatile was super imposed with a slowly varying DC baseline which is the static part [1] [2] [3].\n\nThis static DC element will vary gradually with many low frequency values which attributed towards thermo regulation, the SNS (Sympathetic Nervous System) and respiration. This volume of absorbed light in tissue with respect to time is displayed in Fig 1b.\n\nThe quantity of light that is absorbed and pulsation of arterial blood are interrelated with one other respectively. A precise amount of light will be absorbed by skin pigment , the bone, venous blood, other tissue, and from the arterial blood non-pulsating part. As there is more blood in arteries at the time of systole, the light absorbed is more.\n\nThe basic theories of light absorption in substances and its theoretical concepts in pulse Oximeter operation is estimation of light-absorbing substance’s concentration by using spectrophotometer using Lambert-Beer’s law/ Bouguer’s law/ Beer’s law. This law will detect the light attenuation while entering a uniform sample. If light intensity I_0 for a monochromatic incident light pass a medium some part of the light will be transmitted through medium and while other part will be absorbed [4][5].\n\nThis Fig 2a indicates Rhb / Hb (reduced hemoglobin) and HbO2 (oxyhemoglobin) extinction coefficients at wavelengths ranging from 650nm to 1000nm and Figure 2b illustrates the captivating wavelength regions for both Red (R) and also Infrared (IR) light with the method of pulse oximetry principle. Therefore, the absorption for hemoglobin will change according to its chemical bonding and also with the wavelength of a light applied on it. But light absorbed in Red domain of spectrum is higher in RHb when compared with HbO2. RHb has bit more clearly than HbO2 for light in IR region.\n\nThis Pulse oximetry drives by using two different wavelengths for determining oxygen saturation in arterial part with wavelengths at Red 660nm for light and IR in 940nm respectively. In blood of the human, at these wavelengths, highest light absorber is hemoglobin [6] [7].\n\nMeasurement of two different wavelengths permits differentiating concentrations of HbO2 & RHb as different absorbers, it is known as functional hemoglobin. It can mix in oxygen molecular reversibly, is a key drive in hemoglobin. The majority of Hbs seen in healthy people is functional hemoglobin. Illuminating Red or IR (I0) at the extremity to detect the light intensity emitted by (I) using a photo detector circuit, a PPG signal could be produced. As light passes through the tissue at the tip of the finger/ ear lobe, the pigmentation will absorb light from the different absorbing substances , the bones and the venous/ arterial blood will absorb much of the light.\n\nIn pulse oximetry the use of Lambert-Beer’s law is shown in Fig 3, where transmitted light amount correlates with pulsation in blood. The light transmitted decrease in systole mostly due to high amount in absorbing matters (hemoglobin) with a peak (IL)is low, due to ‘d’ arteries path length increase as d-max. In diastole, diameter is minimal in arterial vessels d-min and absorbance in hemoglobin is nominal however, high peak (IH) is observed for volume of transmitted light [8][9][10][11]."
+    },
+    {
+      "label": "methods",
+      "title": "Experimental Work",
+      "subheadings": [
+        "2.1 Measurement of heart rate",
+        "2.2 Measurement of saturation percentage of oxygen (SpO2 %)",
+        "2.3 Non-invasive measurement of hemoglobin",
+        "2.4 Uploading sensor data to thing speak cloud"
+      ],
+      "n_sentences": 54,
+      "text": "The current work proposes is economic approach for determining parameters of blood by photoplethysmography (PPG) concept. PPG details obtained non-invasively by the fingertip was included in the calculation of Hb concentration and even heart rate. The PPG signal received from the fingertip is first processed by filters, and then the data was sent to the Computer through the micro controller interface for MATLAB processing in order to approximate the blood parameters.\n\nIn this projected method the measurement of hemoglobin (Hb) is done non-invasively by illuminating a fingertip with a light source of an Infrared (IR) LED and Red LED ranging from 600nm to 900nm and a photodiode for light absorption detection . An empirical equation is calculated for measurement of Hb concentration in blood considering a model for light attenuation in the extremity, known extinction coefficients for hemoglobin components (without and with O2). Analyzing signal using filtering, signal processing using Arduino IDE and MATLAB tool boxes. The parameters calculated are sent to the medical practitioner through an IOT platform that could be visualized in an android mobile application to monitor the patient condition for diagnosing and also in critical situation so that the course of action or the treatment can be planned. The Proposed Block Diagram representing Hemoglobin (Hb) Estimation is mentioned in Fig 4.\n\nThe following steps are considered for measuring the heart rate non-invasively from the acquired IR values. There are various internal functions for heartbeat estimation :\n\n• Function for Heart Rate Monitor will take a sample number and sample value. • When a beat is sensed / detected it Returns a value as true or otherwise false. • It is recommended for running average of at least four samples and then the corresponding value is displayed on the screen. • Current state is stored. • Followed by data sample Processing. • Detecting the (rising edge) positive zero crossing. • Heartbeat is sensed/ detected. • Detecting the (falling edge) negative zero crossing. • In positive cycle the maximum value is acquired. • In negative cycle the minimum value is acquired. • Average DC Estimator is applied. • Low Pass Finite Impulse Response Filter is applied. • At the final stage an Integer multiplier is applied\n\nAt the instant of both diastole and systole the vascular pulsation will vary drastically . During systole, as blood volume increases in tissues, arterial pulsation will reach its peak. As a result, the backscattered or emitted light intensity reduces as the greater volume of blood supply absorbs more light. While in diastole, as there will less amount of blood in the vascular bed, the light transmitted or backscattered increases.\n\nAny variation in detector sensitivity or LED intensity can modify the intensity of light detected by the sensor. This dependency on emitted or backscattered light strength can easily be balanced by conducting the normalization technique by which the ratio of the AC component (pulsatile) to the DC component (non-pulsatile) is determined as shown in the equation. (1)\n\n(1)\n\nTherefore, the accumulation due to underlying tissues or venous fluid will not affect the calculation. The normalisation principle would have to be extended to infrared (IR) LED and red (R) LED wavelengths as illustrated in Fig 5. The R/IR normalized value which is “ratio of ratios” can easily be related empirically with the SpO2. The SpO2 percentage is 85% when the ratio is ‘1’.\n\nThe absorbance in most of the pulse oximeters will be measured at two different wavelengths with the help of the empirical relationship measured using the IR and R values obtained and estimated by using the Eq. (2)\n\n(2)\n\nWhere R/ IR is the ratio of AC/ DC calculated for both the Red and IR LEDs separately and then the calculation of the ratio of (Red LED)/ (IR LED) is performed. Linear regression coefficients were used here as A and B and their values are taken according to the literature Survey. Pulse oximeters accurately read SaO2 in blood which is normally enough for medical use under normal situations as it uses a calibration curve.\n\nThe value in the baseline indicated as the DC component referring to the oscillation in the signal referred to as the AC component would be used to approximate SpO2. SpO2 calculation relies on computing the Pulse Modulation ratio or “ratio of ratios” R.\n\nMentioned below is an example providing how the calculation of SpO2 percentage is carried out using sample PPG data.\n\n• For trail signal of PPG, the R value which is ratio of ratios can be computed by considering the below mentioned example.\n\n(3)\n\n• The value of R is the only attribute considered for the estimation of SpO2. The standard model for figuring SpO2 percent is as follows:\n\n(4)\n\n• The above classical model is used to the maximum extent for the literature survey in the documentation of commercial medical devices. Nevertheless, the calibration curves hold the most important responsibility for accurate and precise outcome for the linear approximations were delivered.\n\nThe brief procedure is shown as flow chart in the Fig 6 where A & B act as the regression coefficients.\n\nThe calculation of non-invasive hemoglobin is achieved by following the fundamental concepts of beer-lamberts and pulse oximetry. DC and AC values have been calculated in the same way as in the estimation of percentage of SpO2. The following procedure describes the calculation of Hb non-invasively:\n\n• First step in the process is finding the DC and AC values from acquired photoplethysmography signals for the both wavelengths. • Extinction coefficients for both wavelengths are noted [1]. • The value for every wavelength is calculated by trial and error method considering the invasive Hb values as basis for the measurement. This variable changes with the heart rate, as for measuring the heart rate IR LED is used so only variation of IR LED is done by considering Red LED as reference. • For the calculation of Hb, components for both the wavelengths are calculated.\n\nThe process of uploading data:\n\n• An account is created in the MATHWORKS • Help tool box of Thing-speak from the add-ons provided in MATLAB software. • After registration process, a public/ private channel is established on the thingspeak website. • By using thing Speak Write function and also the read function write the calculated data from the MATLAB software is transmitted to server/cloud and then viewing in the android mobile after downloading and registering in application."
+    },
+    {
+      "label": "results",
+      "title": "Results",
+      "subheadings": [
+        "3.1 Output of PPG sensor",
+        "3.2 Comparison and analysis"
+      ],
+      "n_sentences": 28,
+      "text": "The Fig 7a and b representing the signal waveform of the IR LED and the Red LED of the PPG signal picked up from the subject-1 with respect to time & amplitude . Signal strength is observed by placing the sensor onto the subject-1 at the fingertip of Index finger.\n\nThe calculated heart rate is logged into a text file using the RS232 data logger using MATLAB a graph is plotted considering the logged data values presented in Fig 7 c and d shows the heart rate measured using Arduino IDE for an average signal obtained by the subject-1.\n\nThe SpO2 percent is determined by taking into account the sum of at least 10 SpO2 samples collected by the execution of the empiric method. The snapshot of the MATLAB command window is in Fig 7 ewhere the average calculated SpO2 % for a subject is given. The graph plotted in MATLAB with SpO2 % values is shown in Fig 7 f Hb measured non-invasively & invasively by fine-tuning the values of Kλ is specified in the resulting Table 2 for different subjects with different complexion. The Figure 8 shows the graph of the obtained Hb values noninvasively along with the normalized value, where the concept of normalization is mandatory to produce the uniformity in the different signals obtained by various subjects.\n\nThe normalized value obtained for the given in the graph of Fig 7.7 for subject-1 is about 13.1 gm / dl. This value comes under the healthy range of Hb.\n\nData samples are obtained from a number of subjects with three distinct types of skin tones for the calculation of Kλ values. The Kλvalue is fixed for 660nm Red LED as 0.25 for every skin tone (fair, moderate, dark). The Kλvalue varies for 880nm/ 940nm. The arbitrary values of Kλ of IR LED at 880nm / 940nm were observed practically:\n\n• For the darker tone Kλvalue is low 0.29 to 0.2. • For moderate tone Kλvalue is normal 0.39. • For fair tone Kλvalue is high 0.57 to 0.5.\n\nThe samples are collected individually for the three different skin tones for the process of valuation the bar graph for the estimated average haemo globin for fair skin tone. The values according to the five subjects are 10.15 gm/ dl, 11.65 gm/ dl, 16.57 gm/ dl, 12.26 gm/ dl, 13.7 gm / dl. The bar graph for the estimated average hemoglobin for moderate skin tone. The values according to the five subjects are 11.49 gm/ dl, 11.64 gm/ dl, 12.64 gm/ dl, 12.9 gm/ dl, 12.7 gm/ dl. The bar graph for the estimated average hemoglobin for dark skin tone. The values according to the five subjects are 10.48 gm/ dl, 13.69 gm/ dl, 10.92 gm/ dl, 17.33 gm/ dl, 13.15 gm/ dl. The average value obtained in non-invasive and invasive hemoglobin using the three skin tones are considered and seen in the fig 7.7.\n\n3.3 Uploading and visualizing calculated parameters into the thing Speak database of an android application\n\nThe channel is created with different fields such as name, Description, Fields, Meta data, external links if any etc. The uploaded non-invasive hemoglobin data for the subject-1,2,3,4 as given as 8.1 to 17.3 gm/ dl. The uploaded average SpO2 value for the subject-1,2,3,4 as given as 83.5 to 92.4 %.\n\nThe values are seen in an android mobile with an application downloaded from the Google play store by using the read API key provided in the channel. Fig 9 shows the results uploaded in the form of values and in the form of a graph."
+    },
+    {
+      "label": "conclusion",
+      "title": "Conclusion and Future Scope",
+      "subheadings": [],
+      "n_sentences": 11,
+      "text": "Hemoglobin measurement, which is used invasively with different physiological factors, has many drawbacks, such as lack of constant monitoring, blood loss, duration and risk of infection and extreme discomfort in chosen patients.\n\nTherefore, this is the key goal of quantifying the non-invasive Hemoglobin (Hb) concentration measurement. Mainly the parameters obtained are evaluated in depth for further inference. The findings were drawn on the basis of the comparative analysis of both invasive and non-invasive methods. The invasive measurements are done at the biochemistry laboratory to test for its accuracy/ approximations and further analysis for error estimations are perceived. Further validation was executed to the full extent by applying the above-mentioned procedure to more number of individuals and computing the average value. The results of the experiments obtained were published to ThingSpeak, the IOT website for smartphone app. The resultant data is uploaded is easily visualized by the medical practitioner on his own android mobile phone with a simple app related to ThingSpeak. The medical practitioner can visualize the Hb values instantaneously through real time provided read API key.\n\nThe kit currently employed is used for testing purposes only, the above-mentioned approach will produce promising results for the production of the indigenous product in the near future. This product could be designed for economical and commercialized standalone system for performing the complete analysis eliminating the invasive methods currently in use."
+    },
+    {
+      "label": "references",
+      "title": "References",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "[1] Kawther Abo Alam, \"Fuzzy Logic Hemoglobin Sensors,\" 2011. [2] O Abdallah, K Abo Alam, and A Bolz, \"Towards Noninvasive Monitoring of Total Hemoglobin Concentration and Fractional Oxygen Saturation Based on Earlobe Pulse Oximetry ,\" 2008. https://doi.org/10.1007/978-3-540-89208-3_414 [3] Kumar R and Ranganathan H, \"Embedded System based Non-invasive Device Development for Hemoglobin Estimation,\" National Journal of Industrial Electronics and Electrical Engineering, pp. 40-43, 2015. [4] AMohamed Abbas, S Ashok, S Prabhu Kumar, and P Balavenkateswarlu, \"Haemoglobin detection in blood by Signal to Image Scanning using Photo-Plethysmo-Graphic-Technique (PPG),\" Indian Journal of Science and Technology, pp. 1-4, 2016. [5] Kumar Abhishek, Amodh Kant Saxena, and Ramesh Kumar Sonkar, \"Non-invasive measurement of heart rate and hemoglobin concentration level through fingertip,\" IEEE, 2015. [6] Chaitra C, Jahnavi priyadarshini G K, and Anupama S, \"Non-Invasive Measurement of\n\nHeart Rate and Hemoglobin Concentration Level through Fingertip,\" SSRG-IJECE, pp. 10-12, 2016. https://doi.org/10.14445/23488549/ijece-v3i7p103 [7] Dorin-Andrei Antonovici, Iuliana Chiuchisan, Oana Geman, and Andrei Tomegea, \"Acquisition and management of biomedical data using Internet of Things concepts,\" IEEE, 2014. https://doi.org/10.1109/isfee.2014.7050625 [8] Edward J. Wang, William Li, Junyi Zhu, Rajneil Rana, and Shwetak N. Patel, \"Noninvasive hemoglobin measurement using unmodified smartphone camera and white flash,\" IEEE, 2017. https://doi.org/10.1109/embc.2017.8037323 [9] J. Lourdes Albina Nirupa and V. Jagadeesh Kumar, \"Non-invasive measurement of hemoglobin content in blood,\" IEEE, 2014. [10] Raid Saleem Al-Baradie and Anandh Sam Chandra Bose, \"Portable smart non-invasive hemoglobin measurement system,\" IEEE, 2013.\n\n[11] Kawther Abo Alam, \"Fuzzy Logic Hemoglobin Sensors,\" Karlsruher Institut Für Technologie (KIT), 2011."
+    },
+    {
+      "label": "backmatter",
+      "title": "Authors",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "Tatiparti Padma is a professor in Department of ECE, Gokaraju Rangaraju Institute of Engineering and Technology (GRIET), Hyderabad. She completed her Ph. D from Jawaharlal Nehru Technological University, Hyderabad. She completed her M. Tech from Anna University Chennai. She had 20 years of teaching experience. She published many journals and research papers in national and international conferences . She is life associate member of IETE and life member of BMSI. Email: profpadmat@gmail.com\n\nCh. Usha Kumari is a professor in Department of ECE, Gokaraju Rangaraju Institute of Engineering and Technology (GRIET), Hyderabad. She completed her Ph. D from Jawaharlal Nehru Technological University, Hyderabad. She completed her M. Tech from Andhra University Visakhapatnam. She had 15 years of teaching experience . She published many journals and research papers in national and international conferences. She is life associate member of IETE and fellow member of IEEE."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence": "Hemoglobin plays a major role for the existence of the healthy human being it carries oxygen supply to every cell for its survival in the entire body.",
+      "section": "abstract",
+      "position": 0
+    },
+    {
+      "sentence": "As its level varies from person to person between 12-17 grams per deciliter if very high or low cause diseases.",
+      "section": "abstract",
+      "position": 1
+    },
+    {
+      "sentence": "Usually low hemoglobin cause anemia in many of the women during pregnancy.",
+      "section": "abstract",
+      "position": 2
+    },
+    {
+      "sentence": "In the present article the hemoglobin measurement is done noninvasively using the photoplethysmography method at the fingertip by Infrared LED with a wavelength of (880 – 940) nm and Red LED with wavelength of 660nm.",
+      "section": "abstract",
+      "position": 3
+    },
+    {
+      "sentence": "The empirical calculation of Hemoglobin estimation is carried indirectly through model of oxygen saturation in skin-tissue-bone attenuation of the light on to the extremities.",
+      "section": "abstract",
+      "position": 4
+    },
+    {
+      "sentence": "The analysis is supported by the Arduino IDE and MATLAB toolboxes for filtering the noise in signal and processing for target parameters.",
+      "section": "abstract",
+      "position": 5
+    },
+    {
+      "sentence": "Further these real time parameters were sent to expertise to check for corrective ness and with the actual invasive methods for diagnosing its course of action.",
+      "section": "abstract",
+      "position": 6
+    },
+    {
+      "sentence": "Internet of Things (IOT) technology to the outside world communication through Android mobile App.",
+      "section": "abstract",
+      "position": 7
+    },
+    {
+      "sentence": "In a Human body, blood is a fluid which carries nutrients and oxygen to all the cells and sends away the metabolic waste products from cells.",
+      "section": "introduction",
+      "position": 8
+    },
+    {
+      "sentence": "In Red Blood Cells (RBC) the Hemoglobin carries oxygen is in red color contains iron and its main function is to helps oxygen transport through all over body from lungs.",
+      "section": "introduction",
+      "position": 9
+    },
+    {
+      "sentence": "Analysis of various blood substances for instance, glucose, hemoglobin, cholesterol, protein, etc. are very essential parameters for monitoring health condition.",
+      "section": "introduction",
+      "position": 10
+    },
+    {
+      "sentence": "Conventionally, a needle is used for collecting blood sample for the analysis invasively.",
+      "section": "introduction",
+      "position": 11
+    },
+    {
+      "sentence": "This process requires expensive reagents and indirectly will impose on both patient and hospital.",
+      "section": "introduction",
+      "position": 12
+    },
+    {
+      "sentence": "In mammals, around 96% of RBC’s weight is made up of protein and volume of water is around 35%.",
+      "section": "introduction",
+      "position": 13
+    },
+    {
+      "sentence": "Hb has O2 binding capacity about 1.34 mL oxygen per gram and this in turn will increase the oxygen capacity of blood in total to seventy-fold when it is compared with dissolved O2 in blood.",
+      "section": "introduction",
+      "position": 14
+    },
+    {
+      "sentence": "In humans a regular Hb molecule can carry / bind actively with four O2 molecules.",
+      "section": "introduction",
+      "position": 15
+    },
+    {
+      "sentence": "Hb plays a major role for transport of other various gases; It will carry certain volume of body's respiratory CO2 (around 20% - 25% of the whole) as carbamino-hemoglobin where CO2 is bound with globin protein.",
+      "section": "introduction",
+      "position": 16
+    },
+    {
+      "sentence": "A hemoglobin test will be performed to evaluate the quantity of hemoglobin in a person’s Red Blood Corpuscles (RBC).",
+      "section": "introduction",
+      "position": 17
+    },
+    {
+      "sentence": "This is vital because the oxygen accessible to tissues is subject to the oxygen present in RBC and local perfusion.",
+      "section": "introduction",
+      "position": 18
+    },
+    {
+      "sentence": "Without enough hemoglobin, oxygen supplied to the tissues will be insufficient and the lungs and heart must put more effort to solve this issue traditionally.",
+      "section": "introduction",
+      "position": 19
+    },
+    {
+      "sentence": "A low hemoglobin measurement indicates that the person has anemia.",
+      "section": "introduction",
+      "position": 20
+    },
+    {
+      "sentence": "Anemia will result based on decrease of size, function or number of RBC.",
+      "section": "introduction",
+      "position": 21
+    },
+    {
+      "sentence": "Common causes comprise, a deficiency of iron, excessive bleeding and vitamin B12, annihilation of red cells or folic acid by mechanical trauma or antibodies or structurally abnormal hemoglobin.",
+      "section": "introduction",
+      "position": 22
+    },
+    {
+      "sentence": "Hemoglobin levels also decrease due to cancer, kidney diseases, excessive Intravenous fluids and other chronic diseases.",
+      "section": "introduction",
+      "position": 23
+    },
+    {
+      "sentence": "A raised hemoglobin level could be triggered by hypoxia (decreased O2), polycythemia Vera or dehydration (decreased water).",
+      "section": "introduction",
+      "position": 24
+    },
+    {
+      "sentence": "Hypoxia can result from smoking, high altitudes, Influenza (such as emphysema) or Heart Failure.",
+      "section": "introduction",
+      "position": 25
+    },
+    {
+      "sentence": "Hemoglobin levels can also be used to regulate whether an individual requires blood transfusion.",
+      "section": "introduction",
+      "position": 26
+    },
+    {
+      "sentence": "Typically, an individual's hemoglobin must be lower than 7 - 8 gm/dL before considering blood transfusion.",
+      "section": "introduction",
+      "position": 27
+    },
+    {
+      "sentence": "The hemoglobin concentration can be used to know number of packed RBC units that could be transfused.",
+      "section": "introduction",
+      "position": 28
+    },
+    {
+      "sentence": "The oxygen saturation measurement is termed as PPG due to use of photosensitive technique were a Plethysmo Gram (PG) was measured, from an organ in a form of volumetric procedure.",
+      "section": "introduction",
+      "position": 29
+    },
+    {
+      "sentence": "This PPG is acquired by a help of pulse Oximeter sensor on illuminating skin, is a light sensitive in addition to measurement of light absorption changes due to the movement of blood or volume of air in various parts of a body noninvasively at micro vascular tissue bed.",
+      "section": "introduction",
+      "position": 30
+    },
+    {
+      "sentence": "PPG supplies valuable data about the CVS (Cardio Vascular System) non-invasively.",
+      "section": "introduction",
+      "position": 31
+    },
+    {
+      "sentence": "Photoplethysmography technology contains a small number of optoelectronic components for measuring the minor variations in the intensity of light; the LED as light source for illuminating tissue and for the process of detecting the change, used widely for medical devices commercially available to measure oxygen saturation, blood pressure, the total cardiac output were monitored towards respiration also for autonomic assessment function to detect the diseases related to peripheral vascular system.",
+      "section": "introduction",
+      "position": 32
+    },
+    {
+      "sentence": "This PPG signal waveform contains pulsatile physiological waveform (AC part) recognized to changes due synchronous blood volume typically in a frequency approximately 1 Hz with regard during cardiac activity, as shown Fig 1a.",
+      "section": "introduction",
+      "position": 33
+    },
+    {
+      "sentence": "Alternating part which is the AC pulsatile was super imposed with a slowly varying DC baseline which is the static part.",
+      "section": "introduction",
+      "position": 34
+    },
+    {
+      "sentence": "This static DC element will vary gradually with many low frequency values which attributed towards thermo regulation, the SNS (Sympathetic Nervous System) and respiration.",
+      "section": "introduction",
+      "position": 35
+    },
+    {
+      "sentence": "This volume of absorbed light in tissue with respect to time is displayed in Fig 1b.",
+      "section": "introduction",
+      "position": 36
+    },
+    {
+      "sentence": "The quantity of light that is absorbed and pulsation of arterial blood are interrelated with one other respectively.",
+      "section": "introduction",
+      "position": 37
+    },
+    {
+      "sentence": "A precise amount of light will be absorbed by skin pigment, the bone, venous blood, other tissue, and from the arterial blood non-pulsating part.",
+      "section": "introduction",
+      "position": 38
+    },
+    {
+      "sentence": "As there is more blood in arteries at the time of systole, the light absorbed is more.",
+      "section": "introduction",
+      "position": 39
+    },
+    {
+      "sentence": "The basic theories of light absorption in substances and its theoretical concepts in pulse Oximeter operation is estimation of light-absorbing substance’s concentration by using spectrophotometer using Lambert-Beer’s law/ Bouguer’s law/ Beer’s law.",
+      "section": "introduction",
+      "position": 40
+    },
+    {
+      "sentence": "This law will detect the light attenuation while entering a uniform sample.",
+      "section": "introduction",
+      "position": 41
+    },
+    {
+      "sentence": "If light intensity I_0 for a monochromatic incident light pass a medium some part of the light will be transmitted through medium and while other part will be absorbed.",
+      "section": "introduction",
+      "position": 42
+    },
+    {
+      "sentence": "This Fig 2a indicates Rhb / Hb (reduced hemoglobin) and HbO2 (oxyhemoglobin) extinction coefficients at wavelengths ranging from 650nm to 1000nm and Figure 2b illustrates the captivating wavelength regions for both Red (R) and also Infrared (IR) light with the method of pulse oximetry principle.",
+      "section": "introduction",
+      "position": 43
+    },
+    {
+      "sentence": "Therefore, the absorption for hemoglobin will change according to its chemical bonding and also with the wavelength of a light applied on it.",
+      "section": "introduction",
+      "position": 44
+    },
+    {
+      "sentence": "But light absorbed in Red domain of spectrum is higher in RHb when compared with HbO2.",
+      "section": "introduction",
+      "position": 45
+    },
+    {
+      "sentence": "RHb has bit more clearly than HbO2 for light in IR region.",
+      "section": "introduction",
+      "position": 46
+    },
+    {
+      "sentence": "This Pulse oximetry drives by using two different wavelengths for determining oxygen saturation in arterial part with wavelengths at Red 660nm for light and IR in 940nm respectively.",
+      "section": "introduction",
+      "position": 47
+    },
+    {
+      "sentence": "In blood of the human, at these wavelengths, highest light absorber is hemoglobin.",
+      "section": "introduction",
+      "position": 48
+    },
+    {
+      "sentence": "Measurement of two different wavelengths permits differentiating concentrations of HbO2 & RHb as different absorbers, it is known as functional hemoglobin.",
+      "section": "introduction",
+      "position": 49
+    },
+    {
+      "sentence": "It can mix in oxygen molecular reversibly, is a key drive in hemoglobin.",
+      "section": "introduction",
+      "position": 50
+    },
+    {
+      "sentence": "The majority of Hbs seen in healthy people is functional hemoglobin.",
+      "section": "introduction",
+      "position": 51
+    },
+    {
+      "sentence": "Illuminating Red or IR (I0) at the extremity to detect the light intensity emitted by (I) using a photo detector circuit, a PPG signal could be produced.",
+      "section": "introduction",
+      "position": 52
+    },
+    {
+      "sentence": "As light passes through the tissue at the tip of the finger/ ear lobe, the pigmentation will absorb light from the different absorbing substances, the bones and the venous/ arterial blood will absorb much of the light.",
+      "section": "introduction",
+      "position": 53
+    },
+    {
+      "sentence": "In pulse oximetry the use of Lambert-Beer’s law is shown in Fig 3, where transmitted light amount correlates with pulsation in blood.",
+      "section": "introduction",
+      "position": 54
+    },
+    {
+      "sentence": "The light transmitted decrease in systole mostly due to high amount in absorbing matters (hemoglobin) with a peak (IL)is low, due to ‘d’ arteries path length increase as d-max.",
+      "section": "introduction",
+      "position": 55
+    },
+    {
+      "sentence": "In diastole, diameter is minimal in arterial vessels d-min and absorbance in hemoglobin is nominal however, high peak (IH) is observed for volume of transmitted light.",
+      "section": "introduction",
+      "position": 56
+    },
+    {
+      "sentence": "The current work proposes is economic approach for determining parameters of blood by photoplethysmography (PPG) concept.",
+      "section": "methods",
+      "position": 57
+    },
+    {
+      "sentence": "PPG details obtained non-invasively by the fingertip was included in the calculation of Hb concentration and even heart rate.",
+      "section": "methods",
+      "position": 58
+    },
+    {
+      "sentence": "The PPG signal received from the fingertip is first processed by filters, and then the data was sent to the Computer through the micro controller interface for MATLAB processing in order to approximate the blood parameters.",
+      "section": "methods",
+      "position": 59
+    },
+    {
+      "sentence": "In this projected method the measurement of hemoglobin (Hb) is done non-invasively by illuminating a fingertip with a light source of an Infrared (IR) LED and Red LED ranging from 600nm to 900nm and a photodiode for light absorption detection.",
+      "section": "methods",
+      "position": 60
+    },
+    {
+      "sentence": "An empirical equation is calculated for measurement of Hb concentration in blood considering a model for light attenuation in the extremity, known extinction coefficients for hemoglobin components (without and with O2).",
+      "section": "methods",
+      "position": 61
+    },
+    {
+      "sentence": "Analyzing signal using filtering, signal processing using Arduino IDE and MATLAB tool boxes.",
+      "section": "methods",
+      "position": 62
+    },
+    {
+      "sentence": "The parameters calculated are sent to the medical practitioner through an IOT platform that could be visualized in an android mobile application to monitor the patient condition for diagnosing and also in critical situation so that the course of action or the treatment can be planned.",
+      "section": "methods",
+      "position": 63
+    },
+    {
+      "sentence": "The Proposed Block Diagram representing Hemoglobin (Hb) Estimation is mentioned in Fig 4.",
+      "section": "methods",
+      "position": 64
+    },
+    {
+      "sentence": "The following steps are considered for measuring the heart rate non-invasively from the acquired IR values.",
+      "section": "methods",
+      "position": 65
+    },
+    {
+      "sentence": "There are various internal functions for heartbeat estimation.",
+      "section": "methods",
+      "position": 66
+    },
+    {
+      "sentence": "Function for Heart Rate Monitor will take a sample number and sample value.",
+      "section": "methods",
+      "position": 67
+    },
+    {
+      "sentence": "When a beat is sensed / detected it Returns a value as true or otherwise false.",
+      "section": "methods",
+      "position": 68
+    },
+    {
+      "sentence": "It is recommended for running average of at least four samples and then the corresponding value is displayed on the screen.",
+      "section": "methods",
+      "position": 69
+    },
+    {
+      "sentence": "Followed by data sample Processing.",
+      "section": "methods",
+      "position": 70
+    },
+    {
+      "sentence": "Detecting the (rising edge) positive zero crossing.",
+      "section": "methods",
+      "position": 71
+    },
+    {
+      "sentence": "Detecting the (falling edge) negative zero crossing.",
+      "section": "methods",
+      "position": 72
+    },
+    {
+      "sentence": "In positive cycle the maximum value is acquired.",
+      "section": "methods",
+      "position": 73
+    },
+    {
+      "sentence": "In negative cycle the minimum value is acquired.",
+      "section": "methods",
+      "position": 74
+    },
+    {
+      "sentence": "Average DC Estimator is applied.",
+      "section": "methods",
+      "position": 75
+    },
+    {
+      "sentence": "Low Pass Finite Impulse Response Filter is applied.",
+      "section": "methods",
+      "position": 76
+    },
+    {
+      "sentence": "At the final stage an Integer multiplier is applied At the instant of both diastole and systole the vascular pulsation will vary drastically.",
+      "section": "methods",
+      "position": 77
+    },
+    {
+      "sentence": "During systole, as blood volume increases in tissues, arterial pulsation will reach its peak.",
+      "section": "methods",
+      "position": 78
+    },
+    {
+      "sentence": "As a result, the backscattered or emitted light intensity reduces as the greater volume of blood supply absorbs more light.",
+      "section": "methods",
+      "position": 79
+    },
+    {
+      "sentence": "While in diastole, as there will less amount of blood in the vascular bed, the light transmitted or backscattered increases.",
+      "section": "methods",
+      "position": 80
+    },
+    {
+      "sentence": "Any variation in detector sensitivity or LED intensity can modify the intensity of light detected by the sensor.",
+      "section": "methods",
+      "position": 81
+    },
+    {
+      "sentence": "This dependency on emitted or backscattered light strength can easily be balanced by conducting the normalization technique by which the ratio of the AC component (pulsatile) to the DC component (non-pulsatile) is determined as shown in the equation.",
+      "section": "methods",
+      "position": 82
+    },
+    {
+      "sentence": "(1) (1) Therefore, the accumulation due to underlying tissues or venous fluid will not affect the calculation.",
+      "section": "methods",
+      "position": 83
+    },
+    {
+      "sentence": "The normalisation principle would have to be extended to infrared (IR) LED and red (R) LED wavelengths as illustrated in Fig 5.",
+      "section": "methods",
+      "position": 84
+    },
+    {
+      "sentence": "The R/IR normalized value which is “ratio of ratios” can easily be related empirically with the SpO2.",
+      "section": "methods",
+      "position": 85
+    },
+    {
+      "sentence": "The SpO2 percentage is 85% when the ratio is ‘1’.",
+      "section": "methods",
+      "position": 86
+    },
+    {
+      "sentence": "The absorbance in most of the pulse oximeters will be measured at two different wavelengths with the help of the empirical relationship measured using the IR and R values obtained and estimated by using the Eq. (2) (2) Where R/ IR is the ratio of AC/ DC calculated for both the Red and IR LEDs separately and then the calculation of the ratio of (Red LED)/ (IR LED) is performed.",
+      "section": "methods",
+      "position": 87
+    },
+    {
+      "sentence": "Linear regression coefficients were used here as A and B and their values are taken according to the literature Survey.",
+      "section": "methods",
+      "position": 88
+    },
+    {
+      "sentence": "Pulse oximeters accurately read SaO2 in blood which is normally enough for medical use under normal situations as it uses a calibration curve.",
+      "section": "methods",
+      "position": 89
+    },
+    {
+      "sentence": "The value in the baseline indicated as the DC component referring to the oscillation in the signal referred to as the AC component would be used to approximate SpO2.",
+      "section": "methods",
+      "position": 90
+    },
+    {
+      "sentence": "SpO2 calculation relies on computing the Pulse Modulation ratio or “ratio of ratios” R. Mentioned below is an example providing how the calculation of SpO2 percentage is carried out using sample PPG data.",
+      "section": "methods",
+      "position": 91
+    },
+    {
+      "sentence": "For trail signal of PPG, the R value which is ratio of ratios can be computed by considering the below mentioned example.",
+      "section": "methods",
+      "position": 92
+    },
+    {
+      "sentence": "The value of R is the only attribute considered for the estimation of SpO2.",
+      "section": "methods",
+      "position": 93
+    },
+    {
+      "sentence": "The standard model for figuring SpO2 percent is as follows: (4).",
+      "section": "methods",
+      "position": 94
+    },
+    {
+      "sentence": "The above classical model is used to the maximum extent for the literature survey in the documentation of commercial medical devices.",
+      "section": "methods",
+      "position": 95
+    },
+    {
+      "sentence": "Nevertheless, the calibration curves hold the most important responsibility for accurate and precise outcome for the linear approximations were delivered.",
+      "section": "methods",
+      "position": 96
+    },
+    {
+      "sentence": "The brief procedure is shown as flow chart in the Fig 6 where A & B act as the regression coefficients.",
+      "section": "methods",
+      "position": 97
+    },
+    {
+      "sentence": "The calculation of non-invasive hemoglobin is achieved by following the fundamental concepts of beer-lamberts and pulse oximetry.",
+      "section": "methods",
+      "position": 98
+    },
+    {
+      "sentence": "DC and AC values have been calculated in the same way as in the estimation of percentage of SpO2.",
+      "section": "methods",
+      "position": 99
+    },
+    {
+      "sentence": "The following procedure describes the calculation of Hb non-invasively.",
+      "section": "methods",
+      "position": 100
+    },
+    {
+      "sentence": "First step in the process is finding the DC and AC values from acquired photoplethysmography signals for the both wavelengths.",
+      "section": "methods",
+      "position": 101
+    },
+    {
+      "sentence": "Extinction coefficients for both wavelengths are noted.",
+      "section": "methods",
+      "position": 102
+    },
+    {
+      "sentence": "The value for every wavelength is calculated by trial and error method considering the invasive Hb values as basis for the measurement.",
+      "section": "methods",
+      "position": 103
+    },
+    {
+      "sentence": "This variable changes with the heart rate, as for measuring the heart rate IR LED is used so only variation of IR LED is done by considering Red LED as reference.",
+      "section": "methods",
+      "position": 104
+    },
+    {
+      "sentence": "For the calculation of Hb, components for both the wavelengths are calculated.",
+      "section": "methods",
+      "position": 105
+    },
+    {
+      "sentence": "The process of uploading data.",
+      "section": "methods",
+      "position": 106
+    },
+    {
+      "sentence": "An account is created in the MATHWORKS.",
+      "section": "methods",
+      "position": 107
+    },
+    {
+      "sentence": "Help tool box of Thing-speak from the add-ons provided in MATLAB software.",
+      "section": "methods",
+      "position": 108
+    },
+    {
+      "sentence": "After registration process, a public/ private channel is established on the thingspeak website.",
+      "section": "methods",
+      "position": 109
+    },
+    {
+      "sentence": "By using thing Speak Write function and also the read function write the calculated data from the MATLAB software is transmitted to server/cloud and then viewing in the android mobile after downloading and registering in application.",
+      "section": "methods",
+      "position": 110
+    },
+    {
+      "sentence": "The Fig 7a and b representing the signal waveform of the IR LED and the Red LED of the PPG signal picked up from the subject-1 with respect to time & amplitude.",
+      "section": "results",
+      "position": 111
+    },
+    {
+      "sentence": "Signal strength is observed by placing the sensor onto the subject-1 at the fingertip of Index finger.",
+      "section": "results",
+      "position": 112
+    },
+    {
+      "sentence": "The calculated heart rate is logged into a text file using the RS232 data logger using MATLAB a graph is plotted considering the logged data values presented in Fig 7 c and d shows the heart rate measured using Arduino IDE for an average signal obtained by the subject-1.",
+      "section": "results",
+      "position": 113
+    },
+    {
+      "sentence": "The SpO2 percent is determined by taking into account the sum of at least 10 SpO2 samples collected by the execution of the empiric method.",
+      "section": "results",
+      "position": 114
+    },
+    {
+      "sentence": "The snapshot of the MATLAB command window is in Fig 7 ewhere the average calculated SpO2 % for a subject is given.",
+      "section": "results",
+      "position": 115
+    },
+    {
+      "sentence": "The graph plotted in MATLAB with SpO2 % values is shown in Fig 7 f Hb measured non-invasively & invasively by fine-tuning the values of Kλ is specified in the resulting Table 2 for different subjects with different complexion.",
+      "section": "results",
+      "position": 116
+    },
+    {
+      "sentence": "The Figure 8 shows the graph of the obtained Hb values noninvasively along with the normalized value, where the concept of normalization is mandatory to produce the uniformity in the different signals obtained by various subjects.",
+      "section": "results",
+      "position": 117
+    },
+    {
+      "sentence": "The normalized value obtained for the given in the graph of Fig 7.7 for subject-1 is about 13.1 gm / dl.",
+      "section": "results",
+      "position": 118
+    },
+    {
+      "sentence": "This value comes under the healthy range of Hb.",
+      "section": "results",
+      "position": 119
+    },
+    {
+      "sentence": "Data samples are obtained from a number of subjects with three distinct types of skin tones for the calculation of Kλ values.",
+      "section": "results",
+      "position": 120
+    },
+    {
+      "sentence": "The Kλvalue is fixed for 660nm Red LED as 0.25 for every skin tone (fair, moderate, dark).",
+      "section": "results",
+      "position": 121
+    },
+    {
+      "sentence": "The Kλvalue varies for 880nm/ 940nm.",
+      "section": "results",
+      "position": 122
+    },
+    {
+      "sentence": "The arbitrary values of Kλ of IR LED at 880nm / 940nm were observed practically.",
+      "section": "results",
+      "position": 123
+    },
+    {
+      "sentence": "For the darker tone Kλvalue is low 0.29 to 0.2.",
+      "section": "results",
+      "position": 124
+    },
+    {
+      "sentence": "For moderate tone Kλvalue is normal 0.39.",
+      "section": "results",
+      "position": 125
+    },
+    {
+      "sentence": "For fair tone Kλvalue is high 0.57 to 0.5.",
+      "section": "results",
+      "position": 126
+    },
+    {
+      "sentence": "The samples are collected individually for the three different skin tones for the process of valuation the bar graph for the estimated average haemo globin for fair skin tone.",
+      "section": "results",
+      "position": 127
+    },
+    {
+      "sentence": "The values according to the five subjects are 10.15 gm/ dl, 11.65 gm/ dl, 16.57 gm/ dl, 12.26 gm/ dl, 13.7 gm / dl.",
+      "section": "results",
+      "position": 128
+    },
+    {
+      "sentence": "The bar graph for the estimated average hemoglobin for moderate skin tone.",
+      "section": "results",
+      "position": 129
+    },
+    {
+      "sentence": "The values according to the five subjects are 11.49 gm/ dl, 11.64 gm/ dl, 12.64 gm/ dl, 12.9 gm/ dl, 12.7 gm/ dl.",
+      "section": "results",
+      "position": 130
+    },
+    {
+      "sentence": "The bar graph for the estimated average hemoglobin for dark skin tone.",
+      "section": "results",
+      "position": 131
+    },
+    {
+      "sentence": "The values according to the five subjects are 10.48 gm/ dl, 13.69 gm/ dl, 10.92 gm/ dl, 17.33 gm/ dl, 13.15 gm/ dl.",
+      "section": "results",
+      "position": 132
+    },
+    {
+      "sentence": "The average value obtained in non-invasive and invasive hemoglobin using the three skin tones are considered and seen in the fig 7.7.",
+      "section": "results",
+      "position": 133
+    },
+    {
+      "sentence": "3.3 Uploading and visualizing calculated parameters into the thing Speak database of an android application The channel is created with different fields such as name, Description, Fields, Meta data, external links if any etc.",
+      "section": "results",
+      "position": 134
+    },
+    {
+      "sentence": "The uploaded non-invasive hemoglobin data for the subject-1,2,3,4 as given as 8.1 to 17.3 gm/ dl.",
+      "section": "results",
+      "position": 135
+    },
+    {
+      "sentence": "The uploaded average SpO2 value for the subject-1,2,3,4 as given as 83.5 to 92.4 %.",
+      "section": "results",
+      "position": 136
+    },
+    {
+      "sentence": "The values are seen in an android mobile with an application downloaded from the Google play store by using the read API key provided in the channel.",
+      "section": "results",
+      "position": 137
+    },
+    {
+      "sentence": "Fig 9 shows the results uploaded in the form of values and in the form of a graph.",
+      "section": "results",
+      "position": 138
+    },
+    {
+      "sentence": "Hemoglobin measurement, which is used invasively with different physiological factors, has many drawbacks, such as lack of constant monitoring, blood loss, duration and risk of infection and extreme discomfort in chosen patients.",
+      "section": "conclusion",
+      "position": 139
+    },
+    {
+      "sentence": "Therefore, this is the key goal of quantifying the non-invasive Hemoglobin (Hb) concentration measurement.",
+      "section": "conclusion",
+      "position": 140
+    },
+    {
+      "sentence": "Mainly the parameters obtained are evaluated in depth for further inference.",
+      "section": "conclusion",
+      "position": 141
+    },
+    {
+      "sentence": "The findings were drawn on the basis of the comparative analysis of both invasive and non-invasive methods.",
+      "section": "conclusion",
+      "position": 142
+    },
+    {
+      "sentence": "The invasive measurements are done at the biochemistry laboratory to test for its accuracy/ approximations and further analysis for error estimations are perceived.",
+      "section": "conclusion",
+      "position": 143
+    },
+    {
+      "sentence": "Further validation was executed to the full extent by applying the above-mentioned procedure to more number of individuals and computing the average value.",
+      "section": "conclusion",
+      "position": 144
+    },
+    {
+      "sentence": "The results of the experiments obtained were published to ThingSpeak, the IOT website for smartphone app.",
+      "section": "conclusion",
+      "position": 145
+    },
+    {
+      "sentence": "The resultant data is uploaded is easily visualized by the medical practitioner on his own android mobile phone with a simple app related to ThingSpeak.",
+      "section": "conclusion",
+      "position": 146
+    },
+    {
+      "sentence": "The medical practitioner can visualize the Hb values instantaneously through real time provided read API key.",
+      "section": "conclusion",
+      "position": 147
+    },
+    {
+      "sentence": "The kit currently employed is used for testing purposes only, the above-mentioned approach will produce promising results for the production of the indigenous product in the near future.",
+      "section": "conclusion",
+      "position": 148
+    },
+    {
+      "sentence": "This product could be designed for economical and commercialized standalone system for performing the complete analysis eliminating the invasive methods currently in use.",
+      "section": "conclusion",
+      "position": 149
+    }
+  ]
+}

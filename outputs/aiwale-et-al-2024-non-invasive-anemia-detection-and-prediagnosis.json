@@ -1,0 +1,1163 @@
+{
+  "source": "aiwale-et-al-2024-non-invasive-anemia-detection-and-prediagnosis.pdf",
+  "title": "Non-invasive Anemia Detection and Prediagnosis",
+  "keywords": [
+    "Anemia",
+    "disease detection",
+    "Expert System for Disease Diagnosis (ESDD)",
+    "non-invasive",
+    "prediagnosis",
+    "World Health Organization (WHO)"
+  ],
+  "sections": [
+    {
+      "label": "front_matter",
+      "title": "",
+      "subheadings": [
+        "Non-invasive Anemia Detection and Prediagnosis"
+      ],
+      "n_sentences": 0,
+      "text": "Santosh Aiwale, Mahesh T. Kolte, Varsha Harpale, Varsha Bendre, Deepti Khurge, Sheetal Bhandari, Suvarna Kadam and Altaf O. Mulani"
+    },
+    {
+      "label": "abstract",
+      "title": "Abstract",
+      "subheadings": [],
+      "n_sentences": 12,
+      "text": "Background: Anemia is a significant global health concern, often stemming from iron deficiency or deficiencies in folate, vitamins B12, and A. Anemia disproportionately impacts vulnerable populations like children, adolescent girls, and pregnant or postpartum women. Purpose: Anemia is a serious public health issue, impairing productivity, cognitive development, and increasing mortality rates. Anemia is usually detected through blood tests measuring hemoglobin levels, but non-invasive solutions are rquired to lower discomfort, enhance accessibility, and allow for regular monitoring. These methods are essential for early detection in vulnerable populations. Methodology: The research methodology involves extracting valuable information from nail images using data mining algorithms. The focus is on calculating the percentage of blue- and red-stained cells within specific regions of interest in the nail images. Machine-learning algorithms are employed to transform these data into actionable insights for disease diagnosis. Results: The system demonstrates effectiveness in accurately detecting anemia and providing prediagnosis reports to healthcare providers. The reports include comprehensive information such as patient symptoms, health history, test results, and the doctor’s preliminary assessment. This aids in timely and accurate treatment decisions. Conclusion: This research showcases the potential of image processing and machine learning in improving anemia diagnosis and facilitating personalized healthcare interventions."
+    },
+    {
+      "label": "keywords",
+      "title": "Keywords",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "Anemia, disease detection, Expert System for Disease Diagnosis (ESDD), non-invasive, prediagnosis, World Health Organization (WHO)"
+    },
+    {
+      "label": "introduction",
+      "title": "Introduction",
+      "subheadings": [],
+      "n_sentences": 63,
+      "text": "The healthcare business has advanced significantly in recent years, generating vast amounts of data. These data must be processed to extract useful information for analysis, predictions, recommendations, and decision-making. One crucial area in medicine is predicting disease at the right time, as a lack of accuracy can lead to severe consequences. This study proposes a supervised machine-learning algorithm based on neural network algorithms to predict anemia using old image data collected from pathology centers and clinics. The results show that the naive Bayes method outperforms other algorithms, such as Fundus, in terms of accuracy. Anemia that is severe enough to cause is known to have distinctive Fundus characteristics . Twenty percent of anemic patients reported the development of extravascular lesions. The severity of anemia is also associated with venous tortuosity. Retinopathy, a condition characterized by damage to the blood vessels in the retina, is low hemoglobin (Hb) readings observed also related to acute retinopathy in 28.3% of individuals experiencing anemia or thrombocytopenia. The study focused on identifying ocular manifestations in patients with anemia, highlighting conjunctival pallor and retinal hemorrhages as key indicators. Conducted on 96 patients aged 18–50 at GMC Rajouri, the research emphasized recognizing these ocular signs for early detection and management of anemia. The ophthalmic evaluation was deemed crucial in identifying anemia, showcasing the potential of ocular manifestations in aiding timely diagnosis and treatment. As defined by the World Health Organization (WHO), anemia is characterized by a decrease in blood Hb concentration or hematocrit (Hct) levels below certain thresholds . For adult males, anemia is typically defined as Hb <130 g/L (<13 g/dL) or Hct <39%, while for adult females, it is Hb <120 g/L (<12 g/dL) or Hct <37%. Acute anemia often results from blood loss, causing hypovolemia and organ dysfunction. Chronic anemia presents as fatigue, breathlessness, and paleness . Diagnosis involves assessing RBC production and morphology using tests like the reticulocyte index and blood smear analysis. Postpartum anemia is a serious condition that can significantly impact a woman’s quality of life, cognitive abilities , and emotional well-being. Due to low-frequency acute retinopathy with anemic patients, its potential applicability as both diagnostic characteristics is limited. Fundus photography is used to detect anemia and accurately quantify Hb levels. Anemia hand pattern analysis is a diagnostic procedure that involves examining the palms for signs and symptoms of anemia . By examining the blood vessels, color, shape, size, and other physical characteristics of the hand, a health professional can identify anemia in the patient. Anemia is a disorder in which insufficient red blood cells, usually Hb, are produced to carry oxygen around the body. Anemia symptoms typically include tiredness, pale skin, and general weakness. Anemia status bill analysis helps healthcare professionals determine the severity of a patient’s condition and make a more accurate diagnosis. The physician reviews the report and decides if hand sample analysis is performed. Prediagnosis reports are essential for providing detailed information to healthcare professionals for treatment decisions. Sending a prediagnosis report to a hospital for treatment can help ensure the patient receives the best possible care. According to the WHO, between 1995 and 2005, 24.8% of the world’s population suffered from anemia. The estimated worldwide level of anemia is 9% in industrialized nations, with 43% in poor countries. The WHO plans to eliminate anemia in half of women of reproductive age (15–49 years) by 2025. An intrusive examination, especially the blood sample collection, might be used to determine whether a person has anemia.\n\nThe gold standard for diagnosing anemia is the Hb concentration in human blood. On the other hand, collecting a blood sample is an intravenous process requiring specialized surgical instruments. Diagnostic procedures necessitate considerable effort but may expose healthcare personnel to the danger of getting blood-borne illnesses, and patients must experience discomfort while taking blood samples. Aside from this invasive procedure, there are many non-invasive ways to identify anemia, such as examining conjunctiva, fingernails, palms, and tongue. Its conjunctiva, fingers, palms, and tongues seem somewhat pale, indicating that its blood is low in Hb. Prediagnosis reports are essential for providing detailed information to healthcare professionals for treatment decisions. Sending a prediagnosis report to a hospital for treatment can help ensure the patient receives the best possible care. In order to send a prediagnosis report to a hospital, several steps must be taken. The first step is to obtain the patient’s medical history. This should include any test results, treatments, and medication the patient has taken. The next step is to write an essay summarizing the patient’s current medical status and presenting the necessary diagnostic tests or treatments. This essay can include the patient’s present symptoms, previous medical history, physical findings, and laboratory reports. Also, the given home kit provides images of hand patterns, an analysis report, a pre-diagnosis report, and a primary health checkup report in PDF for the concerned hospital or doctor. The doctor will suggest the result of treatment based on the analysis. Anemia is associated with symptoms such as tiredness, breathlessness, and emotional instability, which can affect a woman’s ability and increase the risk of postpartum depression and maternal mortality , making it a critical global health concern. Addressing postpartum anemia is essential to ensure mothers’ and newborns ’ health and well-being. Efforts to address anemia should focus on targeted interventions such as iron fortification of food and supplementation in specific at-risk groups like young children, adolescent females, pregnant women, and lactating mothers. Genetic counseling for hemoglobinopathies is also crucial to prevent severe anemia-related diseases. Overall, there is a need for continued efforts and resources to combat anemia with early detection and prediagnosis. The research comprehensively analyses Hb trends and anemia prevalence worldwide. Using data from 257 surveys, the study highlights the significant burden of anemia, particularly in children and women, and underscores the importance of addressing this public health issue through targeted interventions and policies. Policymakers and public health officials must implement strategies to reduce anemia and improve the health outcomes of vulnerable populations globally. The study utilized data from the National Micronutrient Survey 2011–2012 and the British Geological Survey 2001 to assess key influencers of anemia in Bangladesh. Hb levels were measured using a portable photometer , and ferritin and C-reactive protein (CRP) levels were measured using enzyme-linked immunosorbent assay (ELISA). The study evaluated animal source food intake, groundwater iron concentration, and prevalence of congenital Hb disorders. Statistical analyses were conducted to understand the associations between these factors and Hb levels. The assessment of retinal Fundus images from adults with diabetes found that a deep machine-learning algorithm shows high sensitivity and specificity in detecting referable diabetic retinopathy . Machine-learning algorithms, especially deep learning techniques, have demonstrated potential in medical imaging tasks such as diabetic retinopathy detection. These algorithms can extract predictive features from images, resulting in precise classification. Adjudication processes can enhance algorithm performance by offering a strict reference standard for training. Combining machine-learning algorithms with expert adjudication can improve the precision and effectiveness of diabetic retinopathy screening programs."
+    },
+    {
+      "label": "related_work",
+      "title": "Literature Review",
+      "subheadings": [],
+      "n_sentences": 26,
+      "text": "A non-invasive method is a technique that does not require breaking the skin or entering body cavities to obtain measurements or perform assessments. Non-invasive methods are essential in healthcare as they provide safer, more comfortable , and lower-risk alternatives to invasive procedures. They are precious for monitoring patients, as they reduce the potential for complications, improve patient experience, and can be used in various medical settings. The article discusses advancements in multiwavelength pulse oximetry, particularly the “Rainbow Technology” by Masimo Corp. It high-lights the non-invasive measurement of dyshemoglobins and total Hb, showcasing improved accuracy in clinical monitoring . The technology allows for continuous monitoring of MetHb, COHb, and Hbt, with the potential for measuring other blood substances in the future. The methodology involved collecting a dataset of lip images, processing them digitally, and using transfer learning CNN models for classification , with 138 individuals involved. Anemia diagnosis is based on WHO standard values. The study utilized a convenience sampling approach and captured high-resolution lip images for analysis by experienced medical professionals. The capturing images of the palpebral conjunctiva using a smartphone camera and analyzing the color intensity of the images. Data on Hb levels were collected using spectrophotometric methods. The color intensity data was then analyzed through regression analysis to establish a correlation with Hb levels. Results showed a correlation between color intensity and Hb levels, indicating the potential for smartphone-based anemia detection during pregnancy.\n\nA comprehensive review of research papers on invasive, minimally invasive, and non-invasive methods for measuring Hb levels. The challenges and opportunities associated with each technique compared factors such as data collection sites, biosignal processing techniques, theoretical foundations, photoplethysmogram signal analysis, machine-learning algorithms , and prediction models for Hb level calculation. This analysis recommends developing a practical smartphone-based point-of-care tool for non-invasive Hb measurement . Using SpHb, as a non-invasive screening tool in pre-anesthesia clinics can efficiently rule out anemia and quickly identify patients who need further intervention. It streamlines the process by reducing the need to recall patients for lab tests. While SpHb is valuable, traditional lab tests remain the gold standard for accurate Hb measurement and are essential for standard healthcare practices. While SpHb may offer reasonable accuracy, its trending ability is limited in CO2 insufflation and can be influenced by PaCO2 levels. More studies are needed to investigate the impact of CO2 insufflation on SpHb measurements. Anemia in heart failure patients incurs significant economic burdens, including healthcare costs, hospitalizations, and readmissions, necessitating effective treatment strategies and resource utilization . The research by Mulani and colleagues focuses on efficient implementations of cryptographic algorithms and image authentication on reconfigurable platforms. Additionally, their work explores the application of machine learning in various domains, showcasing advancements in chatbot development, blood glucose level estimation, and dermatological disease detection. Patel et al. focus on field-programmable gate array (FPGA) implementations of advanced encryption standard (AES) algorithms for secure data communication. Recent research includes studies on IoT-based environmental monitoring, high-throughput AES algorithm implementation, area-optimized AES algorithm on FPGA, secure digital image watermarking, high-speed AES algorithm implementation, cryptographic algorithm optimization, Viterbi decoder implementation approaches, pressure drop analysis in Coriolis flow meters, BIOBOT System for COVID care, chatbot design using reinforcement learning, non-invasive blood glucose estimation, accuracy of Hb monitoring in surgery, Hb monitoring with CO2 insufflation, and economic impact of anemia in heart failure."
+    },
+    {
+      "label": "methods",
+      "title": "Materials and Methods",
+      "subheadings": [
+        "Categories of Predictive Models",
+        "Development of the Machine-learning Algorithms"
+      ],
+      "n_sentences": 18,
+      "text": "This work produced two sorts of predictions in this study: continuous (e.g., Hb or hematocrit, referred to as the “regression problem”) and categorized (e.g., presence or absence of anemia after this “classification task”). Theoretically, a single model may be trained for regression and classification applications . However, they trained separate models for classification and regression tasks to maintain the loss function on a similar scale. This work examined the characteristics of three different kinds of prediction models, each having a unique set of information for each one of these tasks. This work utilized linear regression as a foundation for said regression task and logistic regression for said classification challenge. Only demographic and data are utilized in these linear as well as logistic regression models (“metadata” refers to race, age, gender, smoking status, systolic and diastolic blood pressure, pulse rate, length, and weight, as well as body mass index). “Metadata models” are what they are. The second model employed a convolutional neural network (CNN) (explained in more detail in the following section) as input and a Fundus picture as output (“Fundus-only model”). The fourth and final classifier type considered both meta and Fundus photos. Before a wholly linked layer, metadata is combined with the output using Inception v4 architecture 44 (“joint model”). Essentially, the Fundus image is passed into a deep learning model (like the Fundus-only model), and the deep convolution program’s output and metadata are integrated into the joint model’s final layer (i.e., the “late fusion model”).\n\nAs previously indicated, Fundus pictures are preprocessed, and input metadata, including continuous target output (such as Hb), are normalized to have zero mean and unit variation. A deep convolutional network with the Inception v4 framework is being created and then trained with TensorFlow using these data. The Inception v4 system has been seeded utilizing values from networks that had previously been trained to identify objects inside this image dataset, whereas auxiliary network weights form metadata being seeded at randomness. For the regression task, the squared error has been utilized as the loss function, while the cross-entropy is employed for the classification job. The model is trained on something like a Google Tensor Processing Unit accelerator using momentum stochastic mini-batch gradient descent using linear warm-up. The proposed training process is selected to reduce the number of mistakes inside this tuning dataset because the network has 43 million variables. Humans halted training during convergence to avoid overfitting by halting 50 parameters earlier based on training dataset performance."
+    },
+    {
+      "label": "data",
+      "title": "Data Availability",
+      "subheadings": [
+        "Patient Report Generation and Send to the Doctor or Consultant Hospital"
+      ],
+      "n_sentences": 7,
+      "text": "Accessible is the evidence to support their study’s results limitations through using old image data collected from pathology centers or clinics.\n\nThe system detects whether the anemia is present and provides an assumption of various diseases. The detailed flow diagram is shown in Figure 1. All patient details include enrolled history and primary health reports like temperature, SpO2, and body pressure. The captured images and report data are sent to the Consultant hospital or the concerned doctor via email with a PDF file.\n\nThe image of nails taken by a camera with a color detection algorithm will be provided to the Expert System for Disease Diagnosis (ESDD). The system is trained to set data and will compare the input image with all its data for further predictions of any diseases."
+    },
+    {
+      "label": "methods",
+      "title": "Proposed System Architecture",
+      "subheadings": [],
+      "n_sentences": 19,
+      "text": "The proposed design flow is depicted in Figure 1. The proposed system includes a camera, color detection algorithm-trained data set and ESDDS. The input from the camera of nail is given to the ESDDS, which will be further processed with the color detection algorithm and trained data set to predict the anemia. Various tests, including lab tests, urine samples, and symptoms in numerous body areas, may be used to diagnose sickness. This work proposes a system that will take a nail picture as input and forecast probable illnesses based on color shifts as output, as shown in Figure 2. This work is not concerned with system correctness since this is the initial step toward a flawless system.\n\nThe primary goal of this solution design is to produce a cost-effective and time-saving application for usage in the healthcare area. The system uses a nail picture as input.\n\nFurther, the image will be preprocessed to compare it with the dataset. The output is given to the color matcher, and diseases are predicted if the match is found. The suggested approach will aid in avoiding unnecessary testing in the early stages of sickness. Figure 3 shows the actual image of the prediagnostic device.\n\nThe process of Hb detection using nail images entails the acquisition of high-resolution images of the nail bed, followed by preprocessing techniques to enhance clarity. Subsequently, the nail bed region is segmented, and relevant features associated with Hb levels are extracted. Machine-learning models, particularly CNNs, undergo training using datasets that have been labeled to make accurate predictions. The integration with Raspberry Pi allows for real-time processing and the development of user-friendly interfaces for clinical or research purposes. This integration has undergone\n\n• The photograph should be shot in natural light. • The image backdrop should be white or black. • The image should be clear and without flash."
+    },
+    {
+      "label": "methods",
+      "title": "System Architecture",
+      "subheadings": [
+        "Training Dataset Using Fundus",
+        "Data Input Constraints",
+        "The Fundus Algorithm Follows These Steps"
+      ],
+      "n_sentences": 22,
+      "text": "The ESDD system will consist of the following steps:\n\n• Capture and upload nail pictures to the ESDD system. • Using the ESDD system’s graphical user interface (GUI), pick the region of interest (ROI) of an image for illness prediction. • Send the ROI picture component and personally identifiable information to the system for further processing. • On the server side, figure out the average RGB color of the ROI of the nail picture. • Obtain the nail color in RGB format for the picture supplied.\n\nThe server communicates the existence or absence of illnesses , as shown in the tabular style on the GUI.\n\nextensive testing and optimization. Finally, it will forecast potential disorders. Patients and physicians may indeed utilize this approach in healthcare.\n\nIn ESDD, the Fundus tool trains data (nail photos of patients) for the proposed system. The proposed system gathers photographs featuring patients attending the hospital in this section . These photos are sent to imageUtils.java to determine the median RGB of the image, followed by diseaseclassifier. java, and categorized into these averaged RGB values.\n\n• Nails should be clean and free of color, such as nail paint or artificial markings.\n\nThe ESDD method is evaluated using more than 100 nail frames from 20 people. The ESDD system’s performance is evaluated based on both genuine acceptance rate (GAR) and false acceptance rate (FAR). Overall, the GAR has been the proportion of items that match the entire number of tests. The overall FAR seems to be the ratio of the overall series of tests to the quantity of actually nonmatching specimens recognized by the system.\n\nStep I: Such a decision tree is created utilizing its algorithms, and a dataset collection.\n\nStep II: At each node within the tree, the algorithm picks the property that divides the sample across subsets with a larger prevalence within one subclass than the other.\n\nStep III: Its standardized information gain determines these divides (energy disparity).\n\nStep IV: This choice is made using the property with the largest averaged extracted features."
+    },
+    {
+      "label": "results",
+      "title": "Results",
+      "subheadings": [
+        "This Algorithm has Three Base Cases",
+        "Sample of Report"
+      ],
+      "n_sentences": 13,
+      "text": "Step V: This method then recourses across a particular sub.\n\nFigure 4 shows the images taken by a camera for hand nails. A sample of the report is also given for detailed analysis . Hb levels can be detected through nail images through a multi-step process. High-resolution images are acquired, preprocessed, segmented, and features extracted. These features train machine-learning models to predict Hb levels . Validation ensures accuracy. Once validated, the model can be used for non-invasive Hb monitoring. Patients can capture nail images via a smartphone app, aiding early anemia detection and monitoring changes over time. Ethical considerations like patient consent and data security are crucial.\n\nCase I: If all the samples belong to the identical classification, the leaf node identifying a specific class becomes produced.\n\nCase II: If no component delivers information gain, then the class’s predicted value is utilized to implement economics further up the tree.\n\nCase III: If a previously unknown class is discovered, the anticipated value is utilized to generate an implementation of economics further up the tree.\n\nBased on the report, it appears that the patient, who is 40 years old with a body temperature of 99.2°F and a blood pressure of 114, is found to have a 90% match with anemia."
+    },
+    {
+      "label": "discussion",
+      "title": "Discussion",
+      "subheadings": [],
+      "n_sentences": 4,
+      "text": "The analysis date is January 25, 2022, and the patient’s SpO2 level is 94%. The patient reported symptoms of weakness and body pain. The report concludes that anemia has been detected. It would be helpful to review the patient’s treatment history to understand their prior medical conditions and interventions."
+    },
+    {
+      "label": "conclusion",
+      "title": "Conclusion",
+      "subheadings": [],
+      "n_sentences": 11,
+      "text": "In conclusion, the proposed system for disease diagnosis using nail image analysis showed promising results with a high degree of accuracy. The system consists of several essential components, including image acquisition, image processing, and disease prediction using the Fundus algorithm . The input image constraints ensure that the images are captured in optimal conditions for accurate analysis. Based on the decision tree algorithm, the Fundus algorithm uses a training dataset of nail images to classify the presence or absence of diseases. The service’s performance is measured using GAR and FAR, and the results indicate that the system is effective in detecting the presence of diseases. The results of the system are compared to clinical findings, and the proposed system is found to be a reliable alternative to current invasive diagnostic methods. Using individual calibration in the future could further improve the system’s accuracy. This work can be used as a non-invasive screening method for disorders other than anemia. Therefore, further modification and testing may make it feasible for first or clinical usage. The proposed system highlights the potential of using human nails as a diagnostic tool in the healthcare domain and provides an efficient and cost-effective solution for disease diagnosis. It also seems to have the ability to alter how illnesses are diagnosed in the future."
+    },
+    {
+      "label": "conclusion",
+      "title": "Summary",
+      "subheadings": [],
+      "n_sentences": 4,
+      "text": "The developed system for disease diagnosis using nail image analysis has shown promising accuracy, incorporating image acquisition, processing, and disease prediction through the Fundus algorithm. With strict input image standards ensuring optimal analysis conditions, the system’s performance metrics indicate effectiveness in disease detection. Compared to invasive methods, it presents a reliable non-invasive alternative validated against clinical data. Future enhancements like individual calibration could further boost accuracy, making it a viable screening tool for various disorders beyond anemia, potentially reshaping diagnostic approaches in healthcare."
+    },
+    {
+      "label": "backmatter",
+      "title": "Acknowledgments",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "None."
+    },
+    {
+      "label": "backmatter",
+      "title": "Declaration of Conflicting Interests",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "The authors declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article."
+    },
+    {
+      "label": "backmatter",
+      "title": "Ethical Approval",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "Ethical approval was not required for this study."
+    },
+    {
+      "label": "backmatter",
+      "title": "Funding",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "The authors received no financial support for the research, authorship, and/or publication of this article."
+    },
+    {
+      "label": "backmatter",
+      "title": "Informed consent",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "Informed consent was not required for this study as it involved publicly available data or posed minimal risk to participants. However, confidentiality and ethical standards were still strictly maintained throughout the research process."
+    },
+    {
+      "label": "references",
+      "title": "References",
+      "subheadings": [],
+      "n_sentences": 0,
+      "text": "1. Qayum DS. A clinical study to evaluate the incidence of ocular manifestations in patients with nutritional anemia. J Med Sci Clin Res 2019; 7(6). https://doi.org/10.18535/jmscr/v7i6.01 2. Loscalzo J, Fauci A, Kasper D. et al. Harrison’s principles of internal medicine. 21st ed. (Vol.1 & Vol.2). McGraw-Hill Professional, 2022 [online]. https://www.mhprofessional.com/ medical-books/harrisons-principles-internal-medicine-twenty-first -edition-vol1-vol2 3. Milman N. Postpartum anemia I: definition, prevalence, causes, and consequences. Ann Hematol 2011; 90(11): 1247–1253. https://doi.org/10.1007/s00277-011-1279-z, PMID 21710167. 4. Milman N. Postpartum anemia II: prevention and treatment. Ann Hematol 2012; 91(2): 143–154. https://doi.org/10.1007/ s00277-011-1381-2, PMID 22160256. 5. Milman N. Postpartum anemia—still a major problem on a global scale. J Pregnancy Child Health 2015; 02(5). https://doi. org/10.4172/2376-127X.1000e122. 6. Jin L Yeung LF, Cogswell ME. et al. Prevalence of anaemia among pregnant women in south-east China, 1993–2005. Public Health Nutr 2010; 13(10): 1511–1518. https://doi.org/10.1017/ S1368980010001552, PMID 20576191. 7. Milman N. Anemia—still a major health problem in many parts of the world! Ann Hematol 2011; 90(4): 369–377. https://doi. org/10.1007/s00277-010-1144-5, PMID 21221586. 8. Stoltzfus RJ. Iron-deficiency anemia: reexamining the nature and magnitude of the public health problem. Summary: implications for research and programs. J Nutr 2001; 131(2S-2): 697S–700S; discussion 700S. jn/131.2.697S, PMID 11160600. 9. Stevens GA, Finucane MM, De-Regil LM. et al. Global, regional, and national trends in haemoglobin concentration and prevalence of total and severe anaemia in children and pregnant and non-pregnant women for 1995–2011: a systematic analysis of population-representative data. Lancet Glob Health 2013; 1(1): e16–e25. https://doi.org/10.1016/S2214-109X(13)70001-9, PMID 25103581. 10. Rahman S, and Shaheen N. Behind the scene of the prevalence of anaemia: an extended way of reporting. Public Health Nutr 2023; 26(6): 1115–1124. S1368980023000393, PMID 36847280. 11. Gulshan V, Peng L, Coram M. et al. Development and validation of a deep learning algorithm for detection of diabetic retinopathy in retinal Fundus photographs. JAMA 2016; 316(22): 2402–2410. https://doi.org/10.1001/jama.2016.17216, PMID 27898976. 12. LeCun Y, Bengio Y, and Hinton G. Deep learning. Nature 2015; 521(7553): 436–444. PMID 26017442. 13. Krause J, Gulshan V, Rahimy E. et al. Grader variability and the importance of reference standards for evaluating machine learning models for diabetic retinopathy. Ophthalmology 2018; 125(8): 1264–1272. https://doi.org/10.1016/j.ophtha.2018.01.034, PMID 29548646. 14. Fletcher ME, Farber MD, Cohen SB. et al. Retinal abnormalities associated with anemia. Arch Ophthalmol 1984; 102(3): 358. https://doi.org/10.1001/archopht.1984.01040030278017, PMID 6703981. 15. Chang FC, Lin JR, and Liu FC. Validity of accuracy and trending ability of non-invasive continuous total hemoglobin measurement in complex spine surgery: a prospective cohort study. BMC Anesthesiol 2019; 19(1): 117. https://doi.org/10.1186/ s12871-019-0790-y, PMID 31272378. 16. Kazanasmaz H, and Demir M. The comparison of hemoglobin values measured by blood and continuous non-invasive monitoring (SpHb) in newborn infants. J Trop Pediatr 2021; 67(3). https://doi.org/10.1093/tropej/fmaa050, PMID 32756982. 17. Farooq F, Smith ER, Pan Q. et al. Comparison of Masimo total hemoglobin SpHb® continuous non-invasive hemoglobin monitoring device with laboratory complete blood count measurement using venous sample: protocol for an observational substudy of the Pregnancy Risk and Infant Surveillance and Measurement Alliance Maternal and newborn Health (PRISMA MNH) study. Gates Open Res 2023; 7: 50. https://doi. org/10.12688/gatesopenres.14499.1, PMID 37868333. 18. Wittenmeier E, Bellosevich S, Mauff S. et al. Comparison of the gold standard of hemoglobin measurement with the clinical standard (BGA) and non-invasive hemoglobin measurement (SpHb) in small children: a prospective diagnostic observational study. Paediatr Anaesth 2015; 25(10): 1046–1053. https://doi.org/10.1111/pan.12683, PMID 26179143. 19. Pinto M, Barjas-Castro ML, Nascimento S. et al. The new non-invasive occlusion spectroscopy hemoglobin measurement method: a reliable and easy anemia screening test for blood donors. Transfusion 2013; 53(4): 766–769. https://doi. org/10.1111/j.1537-2995.2012.03784.x, PMID 22803617. 20. Jamal A, and John B. Efficacy of non-invasive hemoglobin measurement by pulse CO-oximetry in neonates. J Clin Neonatol 2020; 9(1): 57. https://doi.org/10.4103/jcn.JCN_89_ 19. 21. Macknet MR, Allard M, Applegate RL. et al. The accuracy of non-invasive and continuous total hemoglobin measurement by pulse CO-oximetry in human subjects undergoing hemodilution . Anesth Analg 2010; 111(6): 1424–1426. https://doi. org/10.1213/ANE.0b013e3181fc74b9 PMID 21048100. 22. Barker SJ, and Badal JJ. The measurement of dyshemoglobins and total hemoglobin by pulse oximetry. Curr Opin Anaesthesiol 2008; 21(6): 805–810. https://doi.org/10.1097/ ACO.0b013e328316bb6f, PMID 18997533. 23. Donmez TB, Mansour M, Kutlu M. et al. Non-invasive detection of anemia using lip mucosa image classification. SSRN Electron J 2022. https://doi.org/10.2139/ssrn.4176886 24. Anggraeni MD and Fatoni A. Non-invasive self-care anemia detection during pregnancy using a smartphone camera,” IOP Conference Series. Mater Sci Eng 2017; 172: 012030. https:// 25. Mannino RG, Myers DR, Tyburski EA. et al. Smartphone app for non-invasive detection of anemia using only patient-sourced photos. Nat Commun 2018; 9(1): 4924. https://doi.org/10.1038/ s41467-018-07262-2, PMID 30514831. 26. Berretti S and Su GM. Smart multimedia. Springer Nature; 2022 [online]. https://www.springer.com/gp/book/9789811695106 27. Alwabari M, Alhamad F, Alsahaf F. et al. Can non-invasive spectrophotometric hemoglobin replace laboratory hemoglobin concentrations for preoperative anemia screening? A diagnostic test accuracy study. J Clin Med 2023; 12(17): 5733. https://doi. org/10.3390/jcm12175733, PMID 37685800. 28. Mulani AO and Mane PB. Watermarking and cryptography based image authentication on reconfigurable platform. Bull EEI 2017; 6(2): 181–187. https://doi.org/10.11591/eei. v6i2.651. 29. Deshpande HS, Karande KJ, Mulani AO. Efficient implementation of AES algorithm on FPGA. In International conference on communication and signal processing. Vol. 2014 . IEEE Publications; 2014: 1895–1899. ICCSP.2014.6950174 30. Swami SS, and Mulani AO. An efficient FPGA implementation of discrete wavelet transform for image compression. In International conference on energy, communication, data analytics and soft computing (ICECDS). Vol. 2017 . IEEE Publications; 2017: 3385–3389. ICECDS.2017.8390088 31. Jadhav HM, Mulani A and Jadhav MM. Design and development of chatbot based on reinforcement learning. Machine learning algorithms for signal and image processing, IEEE 2023: 219–229. 32. Mulani AO, Jadhav MM and Seth M. Painless non-invasive blood glucose concentration level estimation using PCA and machine learning. The CRC Book Entitled Artificial Intelligence, Internet of Things (IoT) and Smart Materials for Energy Applications. Internet of Things (IoT) and Smart Materials for Energy Applications. Boca Raton, FL: CRC Press; 2022. 33. Mulani AO, Birajadar G, Ivković N. et al. Deep learning based detection of dermatological diseases using convolutional neural networks and decision trees. Traitement Signal 2023; 40(6): 2819–2825. https://doi.org/10.18280/ts.400642 34. Kulkarni PR, Mulani AO and Mane PB. Robust invisible watermarking for image authentication.In Emerging trends in electrical , communications and information technologies: proceedings of ICECIT. Singapore, Springer; 2017: 193–200. https://doi. org/10.1007/978-981-10-1540-3_20\n\n35. Mulani AO and Mane PB. Area efficient high speed FPGA based invisible watermarking for image authentication. Indian J Sci Technol 2016; 9(39). https://doi.org/10.17485/ijst/2016/ v9i39/101888 36. Mane PB, and Mulani AO. High speed area efficient FPGA implementation of AES algorithm. Int J Reconfig Embedded Syst 2018; 7(3): 157–165. 37. Kashid MM, Karande KJ and Mulani AO. IoT-based environmental parameter monitoring using machine learning approach. In Proceedings of the international conference on cognitive and intelligent computing (ICCIC). Vol. 1. Singapore, Springer Nature Singapore; 2022: 43–51. https://doi.org/10.1007/978- 981-19-2350-0_5 38. Mane PB and Mulani AO. High throughput and area efficient FPGA implementation of AES algorithm. Int J Eng Adv Technol 2019; 8(4): 519–523. 39. Deshpande HS, Karande KJ and Mulani AO. Area optimized implementation of AES algorithm on FPGA. In International conference on communications and signal processing (ICCSP). Vol. 2015. IEEE Publications; 2015: 10–14. https://doi. org/10.1109/ICCSP.2015.7322746 40. Mulani AO and Mane DP. Secure and area efficient implementation of digital image watermarking on reconfigurable platform . Int J Innov Technol Explor Eng 2018; 8(2): 56–61. 41. Mulani AO and Mane PB. High-speed area-efficient implementation of AES algorithm on reconfigurable platform.\n\nComput Netw Sec 2019; 119. https://doi.org/10.5772/ intechopen.82434 42. Mulani AO and Mane PB. Area optimization of cryptographic algorithm on less dense reconfigurable platform.In International conference on smart structures and systems (ICSSS). Vol. 2014. IEEE Publications; 2014: 86–89. https://doi.org/10.1109/ ICSSS.2014.7006201. 43. Mandwale A and Mulani AO. Different approaches for implementation of Viterbi decoder. In IEEE international conference on pervasive computing (ICPC); 2015. 44. Kolhe VA, Pawar SY, Gohari S. et al. Computational and experimental analyses of pressure drop in curved tube structural sections of Coriolis mass flow metre for laminar flow region. Ships Offshore Struct 2024: 1–10. https://doi.org/10.1080/17445302. 2024.2317651 45. Maske Y, Jagadale AB, Mulani AO. et al. Development of BIOBOT system to assist COVID patient and caretakers. Eur J Mol Clin Med 2023; 10(1): 3472–3480. 46. Lee HS, Yoo JW, Kim HY. et al. Accuracy of continuous and non-invasive hemoglobin monitoring in the presence of CO2 insufflation: an observational pilot study. Med Sci Monit 2021; 27: e933027. https://doi.org/10.12659/MSM.933027, PMID 34702795. 47. Spence RK. The economic burden of anemia in heart failure. Heart Fail Clin 2010; 6(3): 373–383. https://doi.org/10.1016/j. hfc.2010.02.003, PMID 20630411."
+    }
+  ],
+  "sentences": [
+    {
+      "sentence": "Anemia is a significant global health concern, often stemming from iron deficiency or deficiencies in folate, vitamins B12, and A.",
+      "section": "abstract",
+      "position": 0,
+      "abstract_tag": "background"
+    },
+    {
+      "sentence": "Anemia disproportionately impacts vulnerable populations like children, adolescent girls, and pregnant or postpartum women.",
+      "section": "abstract",
+      "position": 1
+    },
+    {
+      "sentence": "Anemia is a serious public health issue, impairing productivity, cognitive development, and increasing mortality rates.",
+      "section": "abstract",
+      "position": 2,
+      "abstract_tag": "objective"
+    },
+    {
+      "sentence": "Anemia is usually detected through blood tests measuring hemoglobin levels, but non-invasive solutions are rquired to lower discomfort, enhance accessibility, and allow for regular monitoring.",
+      "section": "abstract",
+      "position": 3
+    },
+    {
+      "sentence": "These methods are essential for early detection in vulnerable populations.",
+      "section": "abstract",
+      "position": 4
+    },
+    {
+      "sentence": "The research methodology involves extracting valuable information from nail images using data mining algorithms.",
+      "section": "abstract",
+      "position": 5,
+      "abstract_tag": "method"
+    },
+    {
+      "sentence": "The focus is on calculating the percentage of blue- and red-stained cells within specific regions of interest in the nail images.",
+      "section": "abstract",
+      "position": 6
+    },
+    {
+      "sentence": "Machine-learning algorithms are employed to transform these data into actionable insights for disease diagnosis.",
+      "section": "abstract",
+      "position": 7
+    },
+    {
+      "sentence": "The system demonstrates effectiveness in accurately detecting anemia and providing prediagnosis reports to healthcare providers.",
+      "section": "abstract",
+      "position": 8,
+      "abstract_tag": "result"
+    },
+    {
+      "sentence": "The reports include comprehensive information such as patient symptoms, health history, test results, and the doctor’s preliminary assessment.",
+      "section": "abstract",
+      "position": 9
+    },
+    {
+      "sentence": "This aids in timely and accurate treatment decisions.",
+      "section": "abstract",
+      "position": 10
+    },
+    {
+      "sentence": "This research showcases the potential of image processing and machine learning in improving anemia diagnosis and facilitating personalized healthcare interventions.",
+      "section": "abstract",
+      "position": 11,
+      "abstract_tag": "conclusion"
+    },
+    {
+      "sentence": "The healthcare business has advanced significantly in recent years, generating vast amounts of data.",
+      "section": "introduction",
+      "position": 12
+    },
+    {
+      "sentence": "These data must be processed to extract useful information for analysis, predictions, recommendations, and decision-making.",
+      "section": "introduction",
+      "position": 13
+    },
+    {
+      "sentence": "One crucial area in medicine is predicting disease at the right time, as a lack of accuracy can lead to severe consequences.",
+      "section": "introduction",
+      "position": 14
+    },
+    {
+      "sentence": "This study proposes a supervised machine-learning algorithm based on neural network algorithms to predict anemia using old image data collected from pathology centers and clinics.",
+      "section": "introduction",
+      "position": 15
+    },
+    {
+      "sentence": "The results show that the naive Bayes method outperforms other algorithms, such as Fundus, in terms of accuracy.",
+      "section": "introduction",
+      "position": 16
+    },
+    {
+      "sentence": "Anemia that is severe enough to cause is known to have distinctive Fundus characteristics.",
+      "section": "introduction",
+      "position": 17
+    },
+    {
+      "sentence": "Twenty percent of anemic patients reported the development of extravascular lesions.",
+      "section": "introduction",
+      "position": 18
+    },
+    {
+      "sentence": "The severity of anemia is also associated with venous tortuosity.",
+      "section": "introduction",
+      "position": 19
+    },
+    {
+      "sentence": "Retinopathy, a condition characterized by damage to the blood vessels in the retina, is low hemoglobin (Hb) readings observed also related to acute retinopathy in 28.3% of individuals experiencing anemia or thrombocytopenia.",
+      "section": "introduction",
+      "position": 20
+    },
+    {
+      "sentence": "The study focused on identifying ocular manifestations in patients with anemia, highlighting conjunctival pallor and retinal hemorrhages as key indicators.",
+      "section": "introduction",
+      "position": 21
+    },
+    {
+      "sentence": "Conducted on 96 patients aged 18–50 at GMC Rajouri, the research emphasized recognizing these ocular signs for early detection and management of anemia.",
+      "section": "introduction",
+      "position": 22
+    },
+    {
+      "sentence": "The ophthalmic evaluation was deemed crucial in identifying anemia, showcasing the potential of ocular manifestations in aiding timely diagnosis and treatment.",
+      "section": "introduction",
+      "position": 23
+    },
+    {
+      "sentence": "As defined by the World Health Organization (WHO), anemia is characterized by a decrease in blood Hb concentration or hematocrit (Hct) levels below certain thresholds.",
+      "section": "introduction",
+      "position": 24
+    },
+    {
+      "sentence": "For adult males, anemia is typically defined as Hb <130 g/L (<13 g/dL) or Hct <39%, while for adult females, it is Hb <120 g/L (<12 g/dL) or Hct <37%.",
+      "section": "introduction",
+      "position": 25
+    },
+    {
+      "sentence": "Acute anemia often results from blood loss, causing hypovolemia and organ dysfunction.",
+      "section": "introduction",
+      "position": 26
+    },
+    {
+      "sentence": "Chronic anemia presents as fatigue, breathlessness, and paleness.",
+      "section": "introduction",
+      "position": 27
+    },
+    {
+      "sentence": "Diagnosis involves assessing RBC production and morphology using tests like the reticulocyte index and blood smear analysis.",
+      "section": "introduction",
+      "position": 28
+    },
+    {
+      "sentence": "Postpartum anemia is a serious condition that can significantly impact a woman’s quality of life, cognitive abilities, and emotional well-being.",
+      "section": "introduction",
+      "position": 29
+    },
+    {
+      "sentence": "Due to low-frequency acute retinopathy with anemic patients, its potential applicability as both diagnostic characteristics is limited.",
+      "section": "introduction",
+      "position": 30
+    },
+    {
+      "sentence": "Fundus photography is used to detect anemia and accurately quantify Hb levels.",
+      "section": "introduction",
+      "position": 31
+    },
+    {
+      "sentence": "Anemia hand pattern analysis is a diagnostic procedure that involves examining the palms for signs and symptoms of anemia.",
+      "section": "introduction",
+      "position": 32
+    },
+    {
+      "sentence": "By examining the blood vessels, color, shape, size, and other physical characteristics of the hand, a health professional can identify anemia in the patient.",
+      "section": "introduction",
+      "position": 33
+    },
+    {
+      "sentence": "Anemia is a disorder in which insufficient red blood cells, usually Hb, are produced to carry oxygen around the body.",
+      "section": "introduction",
+      "position": 34
+    },
+    {
+      "sentence": "Anemia symptoms typically include tiredness, pale skin, and general weakness.",
+      "section": "introduction",
+      "position": 35
+    },
+    {
+      "sentence": "Anemia status bill analysis helps healthcare professionals determine the severity of a patient’s condition and make a more accurate diagnosis.",
+      "section": "introduction",
+      "position": 36
+    },
+    {
+      "sentence": "The physician reviews the report and decides if hand sample analysis is performed.",
+      "section": "introduction",
+      "position": 37
+    },
+    {
+      "sentence": "Prediagnosis reports are essential for providing detailed information to healthcare professionals for treatment decisions.",
+      "section": "introduction",
+      "position": 38
+    },
+    {
+      "sentence": "Sending a prediagnosis report to a hospital for treatment can help ensure the patient receives the best possible care.",
+      "section": "introduction",
+      "position": 39
+    },
+    {
+      "sentence": "According to the WHO, between 1995 and 2005, 24.8% of the world’s population suffered from anemia.",
+      "section": "introduction",
+      "position": 40
+    },
+    {
+      "sentence": "The estimated worldwide level of anemia is 9% in industrialized nations, with 43% in poor countries.",
+      "section": "introduction",
+      "position": 41
+    },
+    {
+      "sentence": "The WHO plans to eliminate anemia in half of women of reproductive age (15–49 years) by 2025.",
+      "section": "introduction",
+      "position": 42
+    },
+    {
+      "sentence": "An intrusive examination, especially the blood sample collection, might be used to determine whether a person has anemia.",
+      "section": "introduction",
+      "position": 43
+    },
+    {
+      "sentence": "The gold standard for diagnosing anemia is the Hb concentration in human blood.",
+      "section": "introduction",
+      "position": 44
+    },
+    {
+      "sentence": "On the other hand, collecting a blood sample is an intravenous process requiring specialized surgical instruments.",
+      "section": "introduction",
+      "position": 45
+    },
+    {
+      "sentence": "Diagnostic procedures necessitate considerable effort but may expose healthcare personnel to the danger of getting blood-borne illnesses, and patients must experience discomfort while taking blood samples.",
+      "section": "introduction",
+      "position": 46
+    },
+    {
+      "sentence": "Aside from this invasive procedure, there are many non-invasive ways to identify anemia, such as examining conjunctiva, fingernails, palms, and tongue.",
+      "section": "introduction",
+      "position": 47
+    },
+    {
+      "sentence": "Its conjunctiva, fingers, palms, and tongues seem somewhat pale, indicating that its blood is low in Hb.",
+      "section": "introduction",
+      "position": 48
+    },
+    {
+      "sentence": "Prediagnosis reports are essential for providing detailed information to healthcare professionals for treatment decisions.",
+      "section": "introduction",
+      "position": 49
+    },
+    {
+      "sentence": "Sending a prediagnosis report to a hospital for treatment can help ensure the patient receives the best possible care.",
+      "section": "introduction",
+      "position": 50
+    },
+    {
+      "sentence": "In order to send a prediagnosis report to a hospital, several steps must be taken.",
+      "section": "introduction",
+      "position": 51
+    },
+    {
+      "sentence": "The first step is to obtain the patient’s medical history.",
+      "section": "introduction",
+      "position": 52
+    },
+    {
+      "sentence": "This should include any test results, treatments, and medication the patient has taken.",
+      "section": "introduction",
+      "position": 53
+    },
+    {
+      "sentence": "The next step is to write an essay summarizing the patient’s current medical status and presenting the necessary diagnostic tests or treatments.",
+      "section": "introduction",
+      "position": 54
+    },
+    {
+      "sentence": "This essay can include the patient’s present symptoms, previous medical history, physical findings, and laboratory reports.",
+      "section": "introduction",
+      "position": 55
+    },
+    {
+      "sentence": "Also, the given home kit provides images of hand patterns, an analysis report, a pre-diagnosis report, and a primary health checkup report in PDF for the concerned hospital or doctor.",
+      "section": "introduction",
+      "position": 56
+    },
+    {
+      "sentence": "The doctor will suggest the result of treatment based on the analysis.",
+      "section": "introduction",
+      "position": 57
+    },
+    {
+      "sentence": "Anemia is associated with symptoms such as tiredness, breathlessness, and emotional instability, which can affect a woman’s ability and increase the risk of postpartum depression and maternal mortality, making it a critical global health concern.",
+      "section": "introduction",
+      "position": 58
+    },
+    {
+      "sentence": "Addressing postpartum anemia is essential to ensure mothers’ and newborns ’ health and well-being.",
+      "section": "introduction",
+      "position": 59
+    },
+    {
+      "sentence": "Efforts to address anemia should focus on targeted interventions such as iron fortification of food and supplementation in specific at-risk groups like young children, adolescent females, pregnant women, and lactating mothers.",
+      "section": "introduction",
+      "position": 60
+    },
+    {
+      "sentence": "Genetic counseling for hemoglobinopathies is also crucial to prevent severe anemia-related diseases.",
+      "section": "introduction",
+      "position": 61
+    },
+    {
+      "sentence": "Overall, there is a need for continued efforts and resources to combat anemia with early detection and prediagnosis.",
+      "section": "introduction",
+      "position": 62
+    },
+    {
+      "sentence": "The research comprehensively analyses Hb trends and anemia prevalence worldwide.",
+      "section": "introduction",
+      "position": 63
+    },
+    {
+      "sentence": "Using data from 257 surveys, the study highlights the significant burden of anemia, particularly in children and women, and underscores the importance of addressing this public health issue through targeted interventions and policies.",
+      "section": "introduction",
+      "position": 64
+    },
+    {
+      "sentence": "Policymakers and public health officials must implement strategies to reduce anemia and improve the health outcomes of vulnerable populations globally.",
+      "section": "introduction",
+      "position": 65
+    },
+    {
+      "sentence": "The study utilized data from the National Micronutrient Survey 2011–2012 and the British Geological Survey 2001 to assess key influencers of anemia in Bangladesh.",
+      "section": "introduction",
+      "position": 66
+    },
+    {
+      "sentence": "Hb levels were measured using a portable photometer, and ferritin and C-reactive protein (CRP) levels were measured using enzyme-linked immunosorbent assay (ELISA).",
+      "section": "introduction",
+      "position": 67
+    },
+    {
+      "sentence": "The study evaluated animal source food intake, groundwater iron concentration, and prevalence of congenital Hb disorders.",
+      "section": "introduction",
+      "position": 68
+    },
+    {
+      "sentence": "Statistical analyses were conducted to understand the associations between these factors and Hb levels.",
+      "section": "introduction",
+      "position": 69
+    },
+    {
+      "sentence": "The assessment of retinal Fundus images from adults with diabetes found that a deep machine-learning algorithm shows high sensitivity and specificity in detecting referable diabetic retinopathy.",
+      "section": "introduction",
+      "position": 70
+    },
+    {
+      "sentence": "Machine-learning algorithms, especially deep learning techniques, have demonstrated potential in medical imaging tasks such as diabetic retinopathy detection.",
+      "section": "introduction",
+      "position": 71
+    },
+    {
+      "sentence": "These algorithms can extract predictive features from images, resulting in precise classification.",
+      "section": "introduction",
+      "position": 72
+    },
+    {
+      "sentence": "Adjudication processes can enhance algorithm performance by offering a strict reference standard for training.",
+      "section": "introduction",
+      "position": 73
+    },
+    {
+      "sentence": "Combining machine-learning algorithms with expert adjudication can improve the precision and effectiveness of diabetic retinopathy screening programs.",
+      "section": "introduction",
+      "position": 74
+    },
+    {
+      "sentence": "A non-invasive method is a technique that does not require breaking the skin or entering body cavities to obtain measurements or perform assessments.",
+      "section": "related_work",
+      "position": 75
+    },
+    {
+      "sentence": "Non-invasive methods are essential in healthcare as they provide safer, more comfortable, and lower-risk alternatives to invasive procedures.",
+      "section": "related_work",
+      "position": 76
+    },
+    {
+      "sentence": "They are precious for monitoring patients, as they reduce the potential for complications, improve patient experience, and can be used in various medical settings.",
+      "section": "related_work",
+      "position": 77
+    },
+    {
+      "sentence": "The article discusses advancements in multiwavelength pulse oximetry, particularly the “Rainbow Technology” by Masimo Corp.",
+      "section": "related_work",
+      "position": 78
+    },
+    {
+      "sentence": "It high-lights the non-invasive measurement of dyshemoglobins and total Hb, showcasing improved accuracy in clinical monitoring.",
+      "section": "related_work",
+      "position": 79
+    },
+    {
+      "sentence": "The technology allows for continuous monitoring of MetHb, COHb, and Hbt, with the potential for measuring other blood substances in the future.",
+      "section": "related_work",
+      "position": 80
+    },
+    {
+      "sentence": "The methodology involved collecting a dataset of lip images, processing them digitally, and using transfer learning CNN models for classification, with 138 individuals involved.",
+      "section": "related_work",
+      "position": 81
+    },
+    {
+      "sentence": "Anemia diagnosis is based on WHO standard values.",
+      "section": "related_work",
+      "position": 82
+    },
+    {
+      "sentence": "The study utilized a convenience sampling approach and captured high-resolution lip images for analysis by experienced medical professionals.",
+      "section": "related_work",
+      "position": 83
+    },
+    {
+      "sentence": "The capturing images of the palpebral conjunctiva using a smartphone camera and analyzing the color intensity of the images.",
+      "section": "related_work",
+      "position": 84
+    },
+    {
+      "sentence": "Data on Hb levels were collected using spectrophotometric methods.",
+      "section": "related_work",
+      "position": 85
+    },
+    {
+      "sentence": "The color intensity data was then analyzed through regression analysis to establish a correlation with Hb levels.",
+      "section": "related_work",
+      "position": 86
+    },
+    {
+      "sentence": "Results showed a correlation between color intensity and Hb levels, indicating the potential for smartphone-based anemia detection during pregnancy.",
+      "section": "related_work",
+      "position": 87
+    },
+    {
+      "sentence": "A comprehensive review of research papers on invasive, minimally invasive, and non-invasive methods for measuring Hb levels.",
+      "section": "related_work",
+      "position": 88
+    },
+    {
+      "sentence": "The challenges and opportunities associated with each technique compared factors such as data collection sites, biosignal processing techniques, theoretical foundations, photoplethysmogram signal analysis, machine-learning algorithms, and prediction models for Hb level calculation.",
+      "section": "related_work",
+      "position": 89
+    },
+    {
+      "sentence": "This analysis recommends developing a practical smartphone-based point-of-care tool for non-invasive Hb measurement.",
+      "section": "related_work",
+      "position": 90
+    },
+    {
+      "sentence": "Using SpHb, as a non-invasive screening tool in pre-anesthesia clinics can efficiently rule out anemia and quickly identify patients who need further intervention.",
+      "section": "related_work",
+      "position": 91
+    },
+    {
+      "sentence": "It streamlines the process by reducing the need to recall patients for lab tests.",
+      "section": "related_work",
+      "position": 92
+    },
+    {
+      "sentence": "While SpHb is valuable, traditional lab tests remain the gold standard for accurate Hb measurement and are essential for standard healthcare practices.",
+      "section": "related_work",
+      "position": 93
+    },
+    {
+      "sentence": "While SpHb may offer reasonable accuracy, its trending ability is limited in CO2 insufflation and can be influenced by PaCO2 levels.",
+      "section": "related_work",
+      "position": 94
+    },
+    {
+      "sentence": "More studies are needed to investigate the impact of CO2 insufflation on SpHb measurements.",
+      "section": "related_work",
+      "position": 95
+    },
+    {
+      "sentence": "Anemia in heart failure patients incurs significant economic burdens, including healthcare costs, hospitalizations, and readmissions, necessitating effective treatment strategies and resource utilization.",
+      "section": "related_work",
+      "position": 96
+    },
+    {
+      "sentence": "The research by Mulani and colleagues focuses on efficient implementations of cryptographic algorithms and image authentication on reconfigurable platforms.",
+      "section": "related_work",
+      "position": 97
+    },
+    {
+      "sentence": "Additionally, their work explores the application of machine learning in various domains, showcasing advancements in chatbot development, blood glucose level estimation, and dermatological disease detection.",
+      "section": "related_work",
+      "position": 98
+    },
+    {
+      "sentence": "Patel et al. focus on field-programmable gate array (FPGA) implementations of advanced encryption standard (AES) algorithms for secure data communication.",
+      "section": "related_work",
+      "position": 99
+    },
+    {
+      "sentence": "Recent research includes studies on IoT-based environmental monitoring, high-throughput AES algorithm implementation, area-optimized AES algorithm on FPGA, secure digital image watermarking, high-speed AES algorithm implementation, cryptographic algorithm optimization, Viterbi decoder implementation approaches, pressure drop analysis in Coriolis flow meters, BIOBOT System for COVID care, chatbot design using reinforcement learning, non-invasive blood glucose estimation, accuracy of Hb monitoring in surgery, Hb monitoring with CO2 insufflation, and economic impact of anemia in heart failure.",
+      "section": "related_work",
+      "position": 100
+    },
+    {
+      "sentence": "This work produced two sorts of predictions in this study: continuous (e.g., Hb or hematocrit, referred to as the “regression problem”) and categorized (e.g., presence or absence of anemia after this “classification task”).",
+      "section": "methods",
+      "position": 101
+    },
+    {
+      "sentence": "Theoretically, a single model may be trained for regression and classification applications.",
+      "section": "methods",
+      "position": 102
+    },
+    {
+      "sentence": "However, they trained separate models for classification and regression tasks to maintain the loss function on a similar scale.",
+      "section": "methods",
+      "position": 103
+    },
+    {
+      "sentence": "This work examined the characteristics of three different kinds of prediction models, each having a unique set of information for each one of these tasks.",
+      "section": "methods",
+      "position": 104
+    },
+    {
+      "sentence": "This work utilized linear regression as a foundation for said regression task and logistic regression for said classification challenge.",
+      "section": "methods",
+      "position": 105
+    },
+    {
+      "sentence": "Only demographic and data are utilized in these linear as well as logistic regression models (“metadata” refers to race, age, gender, smoking status, systolic and diastolic blood pressure, pulse rate, length, and weight, as well as body mass index).",
+      "section": "methods",
+      "position": 106
+    },
+    {
+      "sentence": "“Metadata models” are what they are.",
+      "section": "methods",
+      "position": 107
+    },
+    {
+      "sentence": "The second model employed a convolutional neural network (CNN) (explained in more detail in the following section) as input and a Fundus picture as output (“Fundus-only model”).",
+      "section": "methods",
+      "position": 108
+    },
+    {
+      "sentence": "The fourth and final classifier type considered both meta and Fundus photos.",
+      "section": "methods",
+      "position": 109
+    },
+    {
+      "sentence": "Before a wholly linked layer, metadata is combined with the output using Inception v4 architecture 44 (“joint model”).",
+      "section": "methods",
+      "position": 110
+    },
+    {
+      "sentence": "Essentially, the Fundus image is passed into a deep learning model (like the Fundus-only model), and the deep convolution program’s output and metadata are integrated into the joint model’s final layer (i.e., the “late fusion model”).",
+      "section": "methods",
+      "position": 111
+    },
+    {
+      "sentence": "As previously indicated, Fundus pictures are preprocessed, and input metadata, including continuous target output (such as Hb), are normalized to have zero mean and unit variation.",
+      "section": "methods",
+      "position": 112
+    },
+    {
+      "sentence": "A deep convolutional network with the Inception v4 framework is being created and then trained with TensorFlow using these data.",
+      "section": "methods",
+      "position": 113
+    },
+    {
+      "sentence": "The Inception v4 system has been seeded utilizing values from networks that had previously been trained to identify objects inside this image dataset, whereas auxiliary network weights form metadata being seeded at randomness.",
+      "section": "methods",
+      "position": 114
+    },
+    {
+      "sentence": "For the regression task, the squared error has been utilized as the loss function, while the cross-entropy is employed for the classification job.",
+      "section": "methods",
+      "position": 115
+    },
+    {
+      "sentence": "The model is trained on something like a Google Tensor Processing Unit accelerator using momentum stochastic mini-batch gradient descent using linear warm-up.",
+      "section": "methods",
+      "position": 116
+    },
+    {
+      "sentence": "The proposed training process is selected to reduce the number of mistakes inside this tuning dataset because the network has 43 million variables.",
+      "section": "methods",
+      "position": 117
+    },
+    {
+      "sentence": "Humans halted training during convergence to avoid overfitting by halting 50 parameters earlier based on training dataset performance.",
+      "section": "methods",
+      "position": 118
+    },
+    {
+      "sentence": "Accessible is the evidence to support their study’s results limitations through using old image data collected from pathology centers or clinics.",
+      "section": "data",
+      "position": 119
+    },
+    {
+      "sentence": "The system detects whether the anemia is present and provides an assumption of various diseases.",
+      "section": "data",
+      "position": 120
+    },
+    {
+      "sentence": "The detailed flow diagram is shown in Figure 1.",
+      "section": "data",
+      "position": 121
+    },
+    {
+      "sentence": "All patient details include enrolled history and primary health reports like temperature, SpO2, and body pressure.",
+      "section": "data",
+      "position": 122
+    },
+    {
+      "sentence": "The captured images and report data are sent to the Consultant hospital or the concerned doctor via email with a PDF file.",
+      "section": "data",
+      "position": 123
+    },
+    {
+      "sentence": "The image of nails taken by a camera with a color detection algorithm will be provided to the Expert System for Disease Diagnosis (ESDD).",
+      "section": "data",
+      "position": 124
+    },
+    {
+      "sentence": "The system is trained to set data and will compare the input image with all its data for further predictions of any diseases.",
+      "section": "data",
+      "position": 125
+    },
+    {
+      "sentence": "The proposed design flow is depicted in Figure 1.",
+      "section": "methods",
+      "position": 126
+    },
+    {
+      "sentence": "The proposed system includes a camera, color detection algorithm-trained data set and ESDDS.",
+      "section": "methods",
+      "position": 127
+    },
+    {
+      "sentence": "The input from the camera of nail is given to the ESDDS, which will be further processed with the color detection algorithm and trained data set to predict the anemia.",
+      "section": "methods",
+      "position": 128
+    },
+    {
+      "sentence": "Various tests, including lab tests, urine samples, and symptoms in numerous body areas, may be used to diagnose sickness.",
+      "section": "methods",
+      "position": 129
+    },
+    {
+      "sentence": "This work proposes a system that will take a nail picture as input and forecast probable illnesses based on color shifts as output, as shown in Figure 2.",
+      "section": "methods",
+      "position": 130
+    },
+    {
+      "sentence": "This work is not concerned with system correctness since this is the initial step toward a flawless system.",
+      "section": "methods",
+      "position": 131
+    },
+    {
+      "sentence": "The primary goal of this solution design is to produce a cost-effective and time-saving application for usage in the healthcare area.",
+      "section": "methods",
+      "position": 132
+    },
+    {
+      "sentence": "The system uses a nail picture as input.",
+      "section": "methods",
+      "position": 133
+    },
+    {
+      "sentence": "Further, the image will be preprocessed to compare it with the dataset.",
+      "section": "methods",
+      "position": 134
+    },
+    {
+      "sentence": "The output is given to the color matcher, and diseases are predicted if the match is found.",
+      "section": "methods",
+      "position": 135
+    },
+    {
+      "sentence": "The suggested approach will aid in avoiding unnecessary testing in the early stages of sickness.",
+      "section": "methods",
+      "position": 136
+    },
+    {
+      "sentence": "Figure 3 shows the actual image of the prediagnostic device.",
+      "section": "methods",
+      "position": 137
+    },
+    {
+      "sentence": "The process of Hb detection using nail images entails the acquisition of high-resolution images of the nail bed, followed by preprocessing techniques to enhance clarity.",
+      "section": "methods",
+      "position": 138
+    },
+    {
+      "sentence": "Subsequently, the nail bed region is segmented, and relevant features associated with Hb levels are extracted.",
+      "section": "methods",
+      "position": 139
+    },
+    {
+      "sentence": "Machine-learning models, particularly CNNs, undergo training using datasets that have been labeled to make accurate predictions.",
+      "section": "methods",
+      "position": 140
+    },
+    {
+      "sentence": "The integration with Raspberry Pi allows for real-time processing and the development of user-friendly interfaces for clinical or research purposes.",
+      "section": "methods",
+      "position": 141
+    },
+    {
+      "sentence": "The photograph should be shot in natural light.",
+      "section": "methods",
+      "position": 142
+    },
+    {
+      "sentence": "The image backdrop should be white or black.",
+      "section": "methods",
+      "position": 143
+    },
+    {
+      "sentence": "The image should be clear and without flash.",
+      "section": "methods",
+      "position": 144
+    },
+    {
+      "sentence": "The ESDD system will consist of the following steps.",
+      "section": "methods",
+      "position": 145
+    },
+    {
+      "sentence": "Capture and upload nail pictures to the ESDD system.",
+      "section": "methods",
+      "position": 146
+    },
+    {
+      "sentence": "Using the ESDD system’s graphical user interface (GUI), pick the region of interest (ROI) of an image for illness prediction.",
+      "section": "methods",
+      "position": 147
+    },
+    {
+      "sentence": "Send the ROI picture component and personally identifiable information to the system for further processing.",
+      "section": "methods",
+      "position": 148
+    },
+    {
+      "sentence": "On the server side, figure out the average RGB color of the ROI of the nail picture.",
+      "section": "methods",
+      "position": 149
+    },
+    {
+      "sentence": "Obtain the nail color in RGB format for the picture supplied.",
+      "section": "methods",
+      "position": 150
+    },
+    {
+      "sentence": "The server communicates the existence or absence of illnesses, as shown in the tabular style on the GUI.",
+      "section": "methods",
+      "position": 151
+    },
+    {
+      "sentence": "Finally, it will forecast potential disorders.",
+      "section": "methods",
+      "position": 152
+    },
+    {
+      "sentence": "Patients and physicians may indeed utilize this approach in healthcare.",
+      "section": "methods",
+      "position": 153
+    },
+    {
+      "sentence": "In ESDD, the Fundus tool trains data (nail photos of patients) for the proposed system.",
+      "section": "methods",
+      "position": 154
+    },
+    {
+      "sentence": "The proposed system gathers photographs featuring patients attending the hospital in this section.",
+      "section": "methods",
+      "position": 155
+    },
+    {
+      "sentence": "These photos are sent to imageUtils.java to determine the median RGB of the image, followed by diseaseclassifier.",
+      "section": "methods",
+      "position": 156
+    },
+    {
+      "sentence": "java, and categorized into these averaged RGB values.",
+      "section": "methods",
+      "position": 157
+    },
+    {
+      "sentence": "Nails should be clean and free of color, such as nail paint or artificial markings.",
+      "section": "methods",
+      "position": 158
+    },
+    {
+      "sentence": "The ESDD method is evaluated using more than 100 nail frames from 20 people.",
+      "section": "methods",
+      "position": 159
+    },
+    {
+      "sentence": "The ESDD system’s performance is evaluated based on both genuine acceptance rate (GAR) and false acceptance rate (FAR).",
+      "section": "methods",
+      "position": 160
+    },
+    {
+      "sentence": "Overall, the GAR has been the proportion of items that match the entire number of tests.",
+      "section": "methods",
+      "position": 161
+    },
+    {
+      "sentence": "The overall FAR seems to be the ratio of the overall series of tests to the quantity of actually nonmatching specimens recognized by the system.",
+      "section": "methods",
+      "position": 162
+    },
+    {
+      "sentence": "Step I: Such a decision tree is created utilizing its algorithms, and a dataset collection.",
+      "section": "methods",
+      "position": 163
+    },
+    {
+      "sentence": "Step II: At each node within the tree, the algorithm picks the property that divides the sample across subsets with a larger prevalence within one subclass than the other.",
+      "section": "methods",
+      "position": 164
+    },
+    {
+      "sentence": "Step III: Its standardized information gain determines these divides (energy disparity).",
+      "section": "methods",
+      "position": 165
+    },
+    {
+      "sentence": "Step IV: This choice is made using the property with the largest averaged extracted features.",
+      "section": "methods",
+      "position": 166
+    },
+    {
+      "sentence": "Step V: This method then recourses across a particular sub.",
+      "section": "results",
+      "position": 167
+    },
+    {
+      "sentence": "Figure 4 shows the images taken by a camera for hand nails.",
+      "section": "results",
+      "position": 168
+    },
+    {
+      "sentence": "A sample of the report is also given for detailed analysis.",
+      "section": "results",
+      "position": 169
+    },
+    {
+      "sentence": "Hb levels can be detected through nail images through a multi-step process.",
+      "section": "results",
+      "position": 170
+    },
+    {
+      "sentence": "High-resolution images are acquired, preprocessed, segmented, and features extracted.",
+      "section": "results",
+      "position": 171
+    },
+    {
+      "sentence": "These features train machine-learning models to predict Hb levels.",
+      "section": "results",
+      "position": 172
+    },
+    {
+      "sentence": "Once validated, the model can be used for non-invasive Hb monitoring.",
+      "section": "results",
+      "position": 173
+    },
+    {
+      "sentence": "Patients can capture nail images via a smartphone app, aiding early anemia detection and monitoring changes over time.",
+      "section": "results",
+      "position": 174
+    },
+    {
+      "sentence": "Ethical considerations like patient consent and data security are crucial.",
+      "section": "results",
+      "position": 175
+    },
+    {
+      "sentence": "Case I: If all the samples belong to the identical classification, the leaf node identifying a specific class becomes produced.",
+      "section": "results",
+      "position": 176
+    },
+    {
+      "sentence": "Case II: If no component delivers information gain, then the class’s predicted value is utilized to implement economics further up the tree.",
+      "section": "results",
+      "position": 177
+    },
+    {
+      "sentence": "Case III: If a previously unknown class is discovered, the anticipated value is utilized to generate an implementation of economics further up the tree.",
+      "section": "results",
+      "position": 178
+    },
+    {
+      "sentence": "Based on the report, it appears that the patient, who is 40 years old with a body temperature of 99.2°F and a blood pressure of 114, is found to have a 90% match with anemia.",
+      "section": "results",
+      "position": 179
+    },
+    {
+      "sentence": "The analysis date is January 25, 2022, and the patient’s SpO2 level is 94%.",
+      "section": "discussion",
+      "position": 180
+    },
+    {
+      "sentence": "The patient reported symptoms of weakness and body pain.",
+      "section": "discussion",
+      "position": 181
+    },
+    {
+      "sentence": "The report concludes that anemia has been detected.",
+      "section": "discussion",
+      "position": 182
+    },
+    {
+      "sentence": "It would be helpful to review the patient’s treatment history to understand their prior medical conditions and interventions.",
+      "section": "discussion",
+      "position": 183
+    },
+    {
+      "sentence": "In conclusion, the proposed system for disease diagnosis using nail image analysis showed promising results with a high degree of accuracy.",
+      "section": "conclusion",
+      "position": 184
+    },
+    {
+      "sentence": "The system consists of several essential components, including image acquisition, image processing, and disease prediction using the Fundus algorithm.",
+      "section": "conclusion",
+      "position": 185
+    },
+    {
+      "sentence": "The input image constraints ensure that the images are captured in optimal conditions for accurate analysis.",
+      "section": "conclusion",
+      "position": 186
+    },
+    {
+      "sentence": "Based on the decision tree algorithm, the Fundus algorithm uses a training dataset of nail images to classify the presence or absence of diseases.",
+      "section": "conclusion",
+      "position": 187
+    },
+    {
+      "sentence": "The service’s performance is measured using GAR and FAR, and the results indicate that the system is effective in detecting the presence of diseases.",
+      "section": "conclusion",
+      "position": 188
+    },
+    {
+      "sentence": "The results of the system are compared to clinical findings, and the proposed system is found to be a reliable alternative to current invasive diagnostic methods.",
+      "section": "conclusion",
+      "position": 189
+    },
+    {
+      "sentence": "Using individual calibration in the future could further improve the system’s accuracy.",
+      "section": "conclusion",
+      "position": 190
+    },
+    {
+      "sentence": "This work can be used as a non-invasive screening method for disorders other than anemia.",
+      "section": "conclusion",
+      "position": 191
+    },
+    {
+      "sentence": "Therefore, further modification and testing may make it feasible for first or clinical usage.",
+      "section": "conclusion",
+      "position": 192
+    },
+    {
+      "sentence": "The proposed system highlights the potential of using human nails as a diagnostic tool in the healthcare domain and provides an efficient and cost-effective solution for disease diagnosis.",
+      "section": "conclusion",
+      "position": 193
+    },
+    {
+      "sentence": "It also seems to have the ability to alter how illnesses are diagnosed in the future.",
+      "section": "conclusion",
+      "position": 194
+    },
+    {
+      "sentence": "The developed system for disease diagnosis using nail image analysis has shown promising accuracy, incorporating image acquisition, processing, and disease prediction through the Fundus algorithm.",
+      "section": "conclusion",
+      "position": 195
+    },
+    {
+      "sentence": "With strict input image standards ensuring optimal analysis conditions, the system’s performance metrics indicate effectiveness in disease detection.",
+      "section": "conclusion",
+      "position": 196
+    },
+    {
+      "sentence": "Compared to invasive methods, it presents a reliable non-invasive alternative validated against clinical data.",
+      "section": "conclusion",
+      "position": 197
+    },
+    {
+      "sentence": "Future enhancements like individual calibration could further boost accuracy, making it a viable screening tool for various disorders beyond anemia, potentially reshaping diagnostic approaches in healthcare.",
+      "section": "conclusion",
+      "position": 198
+    }
+  ]
+}
